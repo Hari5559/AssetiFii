@@ -13,11 +13,9 @@
     --primdark_col: #1c0452;
     --animfast: '100ms';
     --animslow: '400ms';
-    --pad: 3%
+    --pad: 3%;
+    --bordrad: 5px;
 }
-
-
-/* styling of html elements*/
 
 body {
     font-family: var(--f_fam);
@@ -62,7 +60,7 @@ a:hover {
     margin: 2%;
     width: 96%;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--bordrad);
 }
 
 
