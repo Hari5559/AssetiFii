@@ -15,7 +15,7 @@ function carouselcall() {
     setInterval(function() {
         car();
         j = j % 3 + 1;
-    }, 1000);
+    }, 4000);
 
 }
 

@@ -2,9 +2,9 @@
     background-color: #333333;
     color: azure;
     border-radius: var(--bordrad);
-    width: 70vw;
+    width: 80%;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .userd {
@@ -27,4 +27,16 @@
     height: 80%;
     border-radius: 50%;
     margin-left: 10%;
+}
+
+.loginoutbutton {
+    margin-left: 20vw;
+    background-color: blue;
+    border: none;
+    color: rgb(236, 217, 198);
+    font-size: larger;
+    text-decoration: none;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 30px;
 }

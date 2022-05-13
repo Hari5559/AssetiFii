@@ -36,6 +36,14 @@ a:hover {
     border-radius: var(--bordrad);
 }
 
+.portimg {
+    margin: 2%;
+    margin-left: 25%;
+    width: 50%;
+    border: none;
+    border-radius: var(--bordrad);
+}
+
 
 /* media query to set styling for big screens */
 

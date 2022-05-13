@@ -19,7 +19,7 @@ body {
     font-family: var(--f_fam);
     font-size: var(--f_size);
     animation-duration: var(--animfast);
-    background-color: aquamarine;
+    background-color: rgb(59, 11, 150);
     overscroll-behavior: none;
     box-sizing: border-box;
     margin: 0px;
@@ -39,6 +39,12 @@ body {
 .appbody {
     display: none;
     height: 90vh;
+    width: 96vw;
+    margin-left: 2vw;
+}
+
+#home {
+    display: block;
 }
 
 #navigationcont {
@@ -108,7 +114,7 @@ body {
 
 .homepagebody {
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -129,17 +135,6 @@ body {
     font-size: 250%;
     color: aliceblue;
     background-color: rgb(18, 7, 99);
-}
-
-.loginoutbutton {
-    background-color: blue;
-    border: none;
-    color: rgb(236, 217, 198);
-    font-size: larger;
-    text-decoration: none;
-    width: 20vw;
-    height: 5vh;
-    border-radius: 30px;
 }
 
 .loginoutbutton:hover {
