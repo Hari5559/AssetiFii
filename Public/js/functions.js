@@ -34,13 +34,3 @@ function updatescore(sc, lv, g) {
 }
 
 ////////////////////////////// add the expence of user //////////////////////////////
-
-function addexpence() {
-    var amt = document.getElementById('amt').value;
-    var cat = document.getElementById('spndcat').value;
-    var ref = firebase.database().ref('users/' + user.uid + '/expences/');
-    ref.push({
-        amt: amt,
-        cat: cat,
-    });
-}
