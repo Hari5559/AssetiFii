@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    animation-duration: 1000ms;
 }
 
 :root {
@@ -90,11 +91,13 @@ body {
 }
 
 .navimg {
-    width: 4vw;
- 
+    width: 10vw;
+    background-color: #1455e0;
 }
-.navbtn{
-    border-radius:50%;
+
+.navbtn {
+    border-radius: 50%;
+    background-color: #1455e0;
 }
 
 .Imagebanner {
@@ -126,6 +129,21 @@ body {
     font-size: 250%;
     color: aliceblue;
     background-color: rgb(18, 7, 99);
+}
+
+.loginoutbutton {
+    background-color: blue;
+    border: none;
+    color: rgb(236, 217, 198);
+    font-size: larger;
+    text-decoration: none;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 30px;
+}
+
+.loginoutbutton:hover {
+    background-color: rgb(25, 15, 87);
 }
 
 ::-webkit-scrollbar {

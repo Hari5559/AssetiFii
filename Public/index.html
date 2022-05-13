@@ -46,8 +46,8 @@
             </section>
         </div>
         <!-- expence manager -->
-        <div id="expence" class="appbody"> 
-             
+        <div id="expence" class="appbody">
+
         </div>
         <!-- quiz -->
         <div id="quiz" class="appbody">quiz Demo
@@ -79,7 +79,7 @@
 
         <!-- profile page container-->
         <div class="appbody" id="profilepage">
-            <div id="divlogn"><button onclick="signinout()">login</button> </div>
+            <div id="divlogn"><button class="loginoutbutton" onclick="signinout()">login</button> </div>
             <div class="card" id="userdata">
                 <img id="user_image" src="res/defuser.webp">
                 <div id="scorelist">
@@ -88,7 +88,7 @@
                     <p id="level"></p>
                     <p id="goals"></p>
                 </div>
-                <button onclick="signinout()">logout</button>
+                <button class="loginoutbutton" onclick="signinout()">logout</button>
 
             </div>
         </div>
@@ -384,11 +384,16 @@
     </div>
     <!-- App Container end-->
     <div id="navigationcont">
-        <div><button onclick="changeapplet('home')"><img class="navimg" src="res/homme.webp"></button> </div>
-        <div><button onclick="changeapplet('expence')"><img class="navimg" src="res/moneymanager.webp"></button> </div>
-        <div><button onclick="changeapplet('resources')"><img class="navimg" src="res/resource.webp"></button> </div>
-        <div><button onclick="changeapplet('quiz')"><img class="navimg" src="res/quiz.webp"></button> </div>
-        <div><button onclick="changeapplet('profilepage')"><img class="navimg" src="res/profile.webp"></button> </div>
+        <div onclick="changeapplet('home')"><img class="navimg" src="res/homme.png">
+        </div>
+        <div onclick="changeapplet('expence')"><img class="navimg" src="res/moneymanager.png">
+        </div>
+        <div onclick="changeapplet('resources')"><img class="navimg" src="res/resource.png">
+        </div>
+        <div onclick="changeapplet('quiz')"><img class="navimg" src="res/quiz.png">
+        </div>
+        <div onclick="changeapplet('profilepage')"><img class="navimg" src="res/profile.png">
+        </div>
 
     </div>
 </body>
