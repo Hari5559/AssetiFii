@@ -29,6 +29,12 @@ function checkAuthState() {
             setuserdata(user.displayName, user.photoURL);
             document.getElementById('userdata').style.display = "block";
             document.getElementById('divlogn').style.display = "none";
+            var ref = firebase.database().ref('users/' + user.uid + '/scores/');
+            ref.set({
+                score: 80,
+                level: 1,
+                goals: 0
+            });
 
         } else {
             console.log("Sign in to use the full features of the app")
@@ -62,6 +68,4 @@ function signinout() {
 function setuserdata(name, imgsrc, level, goals) {
     document.getElementById('user_name').innerHTML = 'name: ' + name;
     document.getElementById('user_image').src = imgsrc;
-    // document.getElementById('user_level').innerHTML = 'level: ' + level;
-    //document.getElementById('user_goals').innerHTML = 'goals: ' + goals;
 }
