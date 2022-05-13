@@ -28,7 +28,22 @@
     <div id="appcontainer">
 
         <!-- Home -->
-        <div id="home" class="appbody"> Home Demo
+        <div id="home" class="appbody">
+            <header class="Hheading">ASSETIFY</header>
+
+            <div class="Imagebanner">
+                <div class="carousel-image">
+                    <img src="res/1.webp" class="caa" alt="img1" />
+                    <img src="res/2.webp" class="caa" alt="img2" />
+                    <img src="res/3.webp" class="caa" alt="img3" />
+                    <img src="res/1.webp" class="caa" alt="img4" />
+                </div>
+            </div>
+
+            <section class="homepagebody">
+                <div class="currentlist"></div>
+                <div class="currentlist"></div>
+            </section>
         </div>
         <!-- expence manager -->
         <div id="expence" class="appbody"> 
@@ -40,23 +55,23 @@
         <!-- resources page-->
         <div class="appbody" id="resources">
 
-            <div class="resourceitem">
-                <button class="resouceBtn" onclick="changeapplet('stock')">
+            <div class="rowitem">
+                <button class="rowBtn" onclick="changeapplet('stock')">
                   Stocks
                 </button>
             </div>
-            <div class="resourceitem">
-                <button class="resouceBtn" onclick="changeapplet('crypto')">
+            <div class="rowitem">
+                <button class="rowBtn" onclick="changeapplet('crypto')">
                   Crypto
                 </button>
             </div>
-            <div class="resourceitem">
-                <button class="resouceBtn" onclick="changeapplet('freelancing')">
+            <div class="rowitem">
+                <button class="rowBtn" onclick="changeapplet('freelancing')">
                   Affiliate marketing
                 </button>
             </div>
-            <div class="resourceitem">
-                <button class="resouceBtn" onclick="changeapplet('tutor')">
+            <div class="rowitem">
+                <button class="rowBtn" onclick="changeapplet('tutor')">
                   Tutoring
                 </button>
             </div>
@@ -368,14 +383,12 @@
 
     </div>
     <!-- App Container end-->
-    <div id="navigation">
-        <div id="navigationcont">
-            <div><button class="navbtn" onclick="changeapplet('home')"><img class="navimg" src="res/homme.webp"></button> </div>
-            <div><button class="navbtn" onclick="changeapplet('expence')"><img class="navimg" src="res/moneymanager.webp"></button> </div>
-            <div><button class="navbtn" onclick="changeapplet('resources')"><img class="navimg" src="res/resource.webp"></button> </div>
-            <div><button class="navbtn" onclick="changeapplet('quiz')"><img class="navimg" src="res/quiz.webp"></button> </div>
-            <div><button class="navbtn" onclick="changeapplet('profilepage')"><img class="navimg" src="res/profile.webp"></button> </div>
+    <div id="navigationcont">
+        <div><button onclick="changeapplet('home')"><img class="navimg" src="res/homme.webp"></button> </div>
+        <div><button onclick="changeapplet('expence')"><img class="navimg" src="res/moneymanager.webp"></button> </div>
+        <div><button onclick="changeapplet('resources')"><img class="navimg" src="res/resource.webp"></button> </div>
+        <div><button onclick="changeapplet('quiz')"><img class="navimg" src="res/quiz.webp"></button> </div>
+        <div><button onclick="changeapplet('profilepage')"><img class="navimg" src="res/profile.webp"></button> </div>
 
-        </div>
     </div>
 </body>

@@ -3,13 +3,6 @@
     padding: 0px;
 }
 
-.appbody {
-    display: none;
-}
-
-
-/* declaring variables */
-
 :root {
     --f_fam: 'arial';
     --f_size: 100%;
@@ -28,18 +21,23 @@ body {
     background-color: aquamarine;
     overscroll-behavior: none;
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 #appcontainer {
-    width: 96vw;
+    width: 100vw;
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: scroll;
-    padding-left: 2vw;
-    padding-right: 2vw;
+}
+
+.appbody {
+    display: none;
+    height: 90vh;
 }
 
 #navigationcont {
@@ -56,34 +54,26 @@ body {
 }
 
 #resources {
-    height: 50vh;
+    height: 70vh;
     width: 96vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-#resouceHeading {
-    text-align: center;
-    background-color: rgb(47, 197, 37);
-    color: white;
-    height: 8vh;
-    border-radius: 5px;
-}
-
-.resouceBtn {
+.rowBtn {
     text-decoration: none;
     font-size: larger;
     background-color: transparent;
     border: none;
-    color: bisque;
+    color: rgb(236, 217, 198);
 }
 
-.resourceitem:hover {
+.rowitem:hover {
     background-color: rgb(116, 190, 190);
 }
 
-.resourceitem {
+.rowitem {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,12 +84,48 @@ body {
     text-align: center;
 }
 
+.caa {
+    background-color: rgb(116, 190, 190);
+    height: 30vh;
+}
+
 .navimg {
     width: 4vw;
  
 }
 .navbtn{
     border-radius:50%;
+}
+
+.Imagebanner {
+    height: 30vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+.homepagebody {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.currentlist {
+    border: solid black;
+    height: 40vh;
+    width: 45vw;
+    background-color: black;
+    color: #fff;
+}
+
+.Hheading {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 250%;
+    color: aliceblue;
+    background-color: rgb(18, 7, 99);
 }
 
 ::-webkit-scrollbar {
