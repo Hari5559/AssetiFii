@@ -52,6 +52,46 @@ body {
     border: none;
 }
 
+#Resourcecontainer {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    background-color: aqua;
+}
+
+#resouceHeading {
+    /* css of the main heading*/
+    text-align: center;
+    background-color: rgb(47, 197, 37);
+    color: white;
+    height: 8vh;
+    border-radius: 5px;
+}
+
+.resouceBtn {
+    /* css of the buttons   */
+    text-decoration: none;
+    font-size: larger;
+    color: bisque;
+    position: relative;
+    top: 30%;
+}
+
+.resourceitem:hover {
+    background-color: rgb(116, 190, 190);
+}
+
+.resourceitem {
+    /*css of the contents in side the container*/
+    height: 10vh;
+    background-color: black;
+    border-radius: 50px;
+    color: aliceblue;
+    text-align: center;
+}
+
 .navimg {
     width: 4vw;
 }
