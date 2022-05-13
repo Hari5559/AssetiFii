@@ -29,12 +29,7 @@ function checkAuthState() {
             setuserdata(user.displayName, user.photoURL);
             document.getElementById('userdata').style.display = "block";
             document.getElementById('divlogn').style.display = "none";
-            var ref = firebase.database().ref('users/' + user.uid + '/scores/');
-            ref.set({
-                score: 80,
-                level: 1,
-                goals: 0
-            });
+
 
         } else {
             console.log("Sign in to use the full features of the app")
