@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* declaring variables */
+
+:root {
+    --f_fam: 'arial';
+    --f_size: 100%;
+    --Prim_col: #1455e0;
+    --primdark_col: #1c0452;
+    --animfast: '100ms';
+    --animslow: '400ms';
+    --pad: 3%;
+    --bordrad: 5px;
+}
+
+body {
+    font-family: var(--f_fam);
+    font-size: var(--f_size);
+    animation-duration: var(--animfast);
+    background-color: aquamarine;
+}
+
+#appcontainer {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigationcont {
+    width: 90vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--Prim_col);
+    border-radius: var(--bordrad);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pageview {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.navimg {
+    width: 4vw;
+}
