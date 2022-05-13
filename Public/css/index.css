@@ -26,21 +26,24 @@ body {
     font-size: var(--f_size);
     animation-duration: var(--animfast);
     background-color: aquamarine;
+    overscroll-behavior: none;
+    box-sizing: border-box;
 }
 
 #appcontainer {
-    width: 100%;
+    width: 96vw;
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: scroll;
+    padding: 2vw;
 }
 
 #navigationcont {
     width: 90vw;
-    height: 10vh;
+    height: 6vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -52,13 +55,11 @@ body {
 }
 
 #resources {
-    height: 40vh;
-    width: 100vw;
+    height: 50vh;
+    width: 96vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    background-color: black;
+    justify-content: space-between;
 }
 
 #resouceHeading {
@@ -82,13 +83,21 @@ body {
 }
 
 .resourceitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 10vh;
-    background-color: black;
-    border-radius: 50px;
+    background-color: rgb(139, 12, 12);
+    border-radius: 10px;
     color: aliceblue;
     text-align: center;
 }
 
 .navimg {
-    width: 4vw;
+    width: 5vw;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
