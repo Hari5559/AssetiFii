@@ -7,25 +7,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AssetiFii</title>
 
-    <link rel="stylesheet" href="css/index.css">
-    <!-- favicon -->
     <link rel="favicon" href="res/logo.png">
-    <script src="js/index.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/prof.css">
+    <link rel="stylesheet" href="css/root.css">
 
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js" defer></script>
     <script src="js/firebase.js" defer></script>
     <script src="js/functions.js" defer></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
 
     <!-- App Container-->
     <div id="appcontainer">
+
+        <!-- Home -->
+        <div id="home" class="appbody"> Home Demo
+        </div>
+        <!-- expence manager -->
+        <div id="expence" class="appbody"> expence Demo
+        </div>
+        <!-- quiz -->
+        <div id="quiz" class="appbody">quiz Demo
+        </div>
+        <!-- resources page-->
+        <div class="appbody" id="resources">
+
+            <div class="resourceitem">
+                <button class="resouceBtn" onclick="changeapplet('stock')">
+                  Stocks
+                </button>
+            </div>
+            <div class="resourceitem">
+                <button class="resouceBtn" onclick="changeapplet('crypto')">
+                  Crypto
+                </button>
+            </div>
+            <div class="resourceitem">
+                <button class="resouceBtn" onclick="changeapplet('freelancing')">
+                  Affiliate marketing
+                </button>
+            </div>
+            <div class="resourceitem">
+                <button class="resouceBtn" onclick="changeapplet('tutor')">
+                  Tutoring
+                </button>
+            </div>
+        </div>
+
+        <!-- profile page container-->
+        <div class="appbody" id="profilepage">
+            <div id="divlogn"><button onclick="signinout()">login</button> </div>
+            <div class="card" id="userdata">
+                <img id="user_image" src="res/defuser.webp">
+                <div id="scorelist">
+                    <p class="userd" id="user_name"> Name : username</p>
+                    <p id="score"></p>
+                    <p id="level"></p>
+                    <p id="goals"></p>
+                </div>
+                <button onclick="signinout()">logout</button>
+
+            </div>
+        </div>
+        <!-- crypto Container-->
+        <div class="appbody" id="crypto">
+            <h3 class="mainhead">What Is CRYPTOCURRENCY</h3>
+            <!-- Paragraph will be the Par class -->
+            <p class="par">
+                Cryptocurrency is a trending name in the current decade. As an investment asset it has more upside compared to stock market. Currently the market capitalisation of whole crypto market resides in 2 trillion US $. Probably you heard about Bitcoin, the first
+                cryptocurrency and biggest cryptocurrency by market capitalisation. So first we can look into BITCOIN(BTC),
+                <!-- a secondary heading is H5 tag and a class sechead-->
+            </p>
+            <img class="centimg" src="res/btc.webp" alt="BTC">
+            <p class="par">
+                Bitcoin is a virtual money that aren’t controlled by any central authorities and never can manipulate the state of the blockchain.Also there are thousands of cryptocurrency are releasing everyday.
+            </p>
+            <img class="centimg" src="res/crypto12.webp" alt="alts">
+            <h3 class="sechead">How to Earn</h3>
+            <p class="par">
+                There are many ways we can earn through the cryptocurrency . One of the main ways is
+                <ul id="ct">
+                    <li> 1.Cryptocurrency Trading</li>
+                    <li>2.Cryptocurrency Airdrop</li>
+                    <li>3.Passive earning by Staking</li>
+                </ul>
+                <!-- this is an inline jhlink, bibance, grow and all other links should be inside this -->
+            </p>
+
+
+            <h5 class="sechead">1.Cryptocurrency Trading</h5>
+            <img class="centimg" src="res/CHART.webp" alt="CHART">
+            <p class="par">
+                Cryptocurrency trading is exchanging of one cryptocurrency to another . Compared to the stock market the return of investment is higher but the risk is also very high compared to stock. No 1 rule in crypto take profit and don’t play with your emotions
+                in trading. So next question will be ,Where we can buy cryptocurrency using fiat money? There are different exchange for this , if you are an Indian user you can choose wazirx.
+            </p>
+            <img class="centimg" src="res/wazirx.webp" alt="wazirx">
+            <a href="https://wazirx.com/invite/nvk67edk">wazirx</a>
+            <p class="par">
+                <ul id="ct">
+                    <li>Signup through the above link and verify the identity.</li>
+                    <li>Deposit INR through the UPI or Bank transfer</li>
+                    <li>Buy crypto with the deposited INR</li>
+                    <li>After doing this step you are a now a cryptocurrency holder.Then you can transfer cryptocurrency to another exchange like binance</li>
+                </ul>
+            </p>
+            <img class="centimg" src="res/binance.webp" alt="binance">
+            <a href="https://www.binance.me/en/activity/referral/offers/claim?ref=CPA_00IZODH1H">binance</a>
+            <p class="par">
+                <ul id="ct">
+                    <li>Signup through this link and verify the identity.</li>
+                    <li>Deposit cryptoassets into the binance</li>
+                    <li>Trade the deposited crypto on the cryptotrading section.</li>
+                    <li>There are 3 types of trading in the binance</li>
+                    <li>Spot trading,Margin Trading,Futures trading</li>
+                </ul>
+            </p>
+            <h5 class="sechead">2.Cryptocurrency Airdrop</h5>
+            <p class="par">Cryptocurrency users can get AIRDROP that is giving out of certain percentage of total supply of token to users. The criteria for these airdrops differs according to the project
+                <ul id="ct">
+                    <li>Socialmedia airdrop</li>
+                    <p class="par">
+                        Users can get cryptocurrency token by doing some task on the social media.
+                    </p>
+                    <li>Retroactive airdrop</li>
+                    <p class="par">
+                        Users can get the governance token of the project by the early users of that project. Projects like uniswap,dydx give 10000$ worth of assets to their early loyal users
+                    </p>
+                    <li>Stakers airdrop</li>
+                    <p class="par">
+                        Users can get airdrop of other projects by staking other projects tokens Mostly the stakers of CosmosHub get the airdrop of other chains that are connected to CosmosHub.You can check the airdrops through this <a href="https://cosmosairdrops.io/.">website</a>                        You can buy cosmos on binance and then transfer to the keplr wallet and then you can stake.
+                    </p>
+                </ul>
+            </p>
+            <img class="centimg" src="res/cosmos.webp" alt="cosmos">
+            <h5 class="sechead">3.Passive Earning by Staking</h5>
+            <p class="par">
+                <ul id="ct">
+                    <li>Users can get additional yield by staking the token or providing liquidity</li>
+                    <li>In single staking the apy may be less but we can reduce the fund lose due to impermanent loss.</li>
+                    <li>But in the case of liquidity providers staking the apy is great but there is a high risk of impermanent loss</li>
+                </ul>
+            </p>
+            <p class="par">
+                These are the major ways of earning in the cryptocurrency.As cryptocurrencies are internet money there will be a high chance of being scammed.So do your own research before investing in the crypto ,also make sure the genuinity of the exchange you are
+                using and check the domain of website of your wallet interacting with.
+            </p>
+        </div>
         <!--freelancing-->
-        <div id="freelancing">
+        <div class="appbody" id="freelancing">
             <!-- Heading will be the mainhead class, it is bold, centerd and italic-->
             <img class="centimg" src="res/freelancing logo.webp" alt=" logo img" />
             <h3 class="mainhead">Freelancing</h3>
@@ -140,28 +275,9 @@
                 Breaking up your tasks into bite-sized chunks and changing your workspace a couple of times a day will help you stay fresh and creative
             </p>
         </div>
-        <!-- resources page-->
-        <div id="Resourcecontainer">
-            <!--container contains the resouceBtn -->
 
-            <div class="resourceitem">
-                <button id="stockinvest.html" class="resouceBtn" onclick="changeiframe(this)">
-                  Stock Ecxhange
-                </button>
-            </div>
-            <div class="resourceitem">
-                <button id="Crypto.html" class="resouceBtn" onclick="changeiframe(this)">
-                  Crypto
-                </button>
-            </div>
-            <div class="resourceitem">
-                <button id="freelancing.html" class="resouceBtn" onclick="changeiframe(this)">
-                  Self Earn
-                </button>
-            </div>
-        </div>
         <!-- stock Container-->
-        <div id="stock">
+        <div class="appbody" id="stock">
             <h3 class="mainhead">Stock Marketing</h3><br><br>
             <!-- Paragraph will be the Par class -->
 
@@ -226,7 +342,7 @@
 
         </div>
         <!--tutor Container-->
-        <div id="tutor">
+        <div class="appbody" id="tutor">
             <h3 class="mainhead"> Tutoring </h3>
             <h5 class="sechead">Chegg</h5>
             <img class="centimg" src="res/chegg1.webp" alt=" alternate img">
@@ -247,120 +363,16 @@
                 <!-- this is an inline link, bibance, grow and all other links should be inside this --><a href="www.google.com">google</a>
             </p>
         </div>
-        <!-- profile page container-->
-        <div id="profilepage">
-            <div id="divlogn"><button onclick="signinout()">login</button> </div>
-            <div class="card" id="userdata">
-                <img id="user_image" src="res/defuser.webp">
-                <div id="scorelist">
-                    <p class="userd" id="user_name"> Name : username</p>
-                    <p id="score"></p>
-                    <p id="level"></p>
-                    <p id="goals"></p>
-                </div>
-                <button onclick="signinout()">logout</button>
 
-            </div>
-        </div>
-        <!-- crypto Container-->
-        <div id="crypto">
-            <h3 class="mainhead">What Is CRYPTOCURRENCY</h3>
-            <!-- Paragraph will be the Par class -->
-            <p class="par">
-                Cryptocurrency is a trending name in the current decade. As an investment asset it has more upside compared to stock market. Currently the market capitalisation of whole crypto market resides in 2 trillion US $. Probably you heard about Bitcoin, the first
-                cryptocurrency and biggest cryptocurrency by market capitalisation. So first we can look into BITCOIN(BTC),
-                <!-- a secondary heading is H5 tag and a class sechead-->
-            </p>
-            <img class="centimg" src="res/btc.webp" alt="BTC">
-            <p class="par">
-                Bitcoin is a virtual money that aren’t controlled by any central authorities and never can manipulate the state of the blockchain.Also there are thousands of cryptocurrency are releasing everyday.
-            </p>
-            <img class="centimg" src="res/crypto12.webp" alt="alts">
-            <h3 class="sechead">How to Earn</h3>
-            <p class="par">
-                There are many ways we can earn through the cryptocurrency . One of the main ways is
-                <ul id="ct">
-                    <li> 1.Cryptocurrency Trading</li>
-                    <li>2.Cryptocurrency Airdrop</li>
-                    <li>3.Passive earning by Staking</li>
-                </ul>
-                <!-- this is an inline jhlink, bibance, grow and all other links should be inside this -->
-            </p>
-
-
-            <h5 class="sechead">1.Cryptocurrency Trading</h5>
-            <img class="centimg" src="res/CHART.webp" alt="CHART">
-            <p class="par">
-                Cryptocurrency trading is exchanging of one cryptocurrency to another . Compared to the stock market the return of investment is higher but the risk is also very high compared to stock. No 1 rule in crypto take profit and don’t play with your emotions
-                in trading. So next question will be ,Where we can buy cryptocurrency using fiat money? There are different exchange for this , if you are an Indian user you can choose wazirx.
-            </p>
-            <img class="centimg" src="res/wazirx.webp" alt="wazirx">
-            <a href="https://wazirx.com/invite/nvk67edk">wazirx</a>
-            <p class="par">
-                <ul id="ct">
-                    <li>Signup through the above link and verify the identity.</li>
-                    <li>Deposit INR through the UPI or Bank transfer</li>
-                    <li>Buy crypto with the deposited INR</li>
-                    <li>After doing this step you are a now a cryptocurrency holder.Then you can transfer cryptocurrency to another exchange like binance</li>
-                </ul>
-            </p>
-            <img class="centimg" src="res/binance.webp" alt="binance">
-            <a href="https://www.binance.me/en/activity/referral/offers/claim?ref=CPA_00IZODH1H">binance</a>
-            <p class="par">
-                <ul id="ct">
-                    <li>Signup through this link and verify the identity.</li>
-                    <li>Deposit cryptoassets into the binance</li>
-                    <li>Trade the deposited crypto on the cryptotrading section.</li>
-                    <li>There are 3 types of trading in the binance</li>
-                    <li>Spot trading,Margin Trading,Futures trading</li>
-                </ul>
-            </p>
-            <h5 class="sechead">2.Cryptocurrency Airdrop</h5>
-            <p class="par">Cryptocurrency users can get AIRDROP that is giving out of certain percentage of total supply of token to users. The criteria for these airdrops differs according to the project
-                <ul id="ct">
-                    <li>Socialmedia airdrop</li>
-                    <p class="par">
-                        Users can get cryptocurrency token by doing some task on the social media.
-                    </p>
-                    <li>Retroactive airdrop</li>
-                    <p class="par">
-                        Users can get the governance token of the project by the early users of that project. Projects like uniswap,dydx give 10000$ worth of assets to their early loyal users
-                    </p>
-                    <li>Stakers airdrop</li>
-                    <p class="par">
-                        Users can get airdrop of other projects by staking other projects tokens Mostly the stakers of CosmosHub get the airdrop of other chains that are connected to CosmosHub.You can check the airdrops through this <a href="https://cosmosairdrops.io/.">website</a>                        You can buy cosmos on binance and then transfer to the keplr wallet and then you can stake.
-                    </p>
-                </ul>
-            </p>
-            <img class="centimg" src="res/cosmos.webp" alt="cosmos">
-            <h5 class="sechead">3.Passive Earning by Staking</h5>
-            <p class="par">
-                <ul id="ct">
-                    <li>Users can get additional yield by staking the token or providing liquidity</li>
-                    <li>In single staking the apy may be less but we can reduce the fund lose due to impermanent loss.</li>
-                    <li>But in the case of liquidity providers staking the apy is great but there is a high risk of impermanent loss</li>
-                </ul>
-            </p>
-            <p class="par">
-                These are the major ways of earning in the cryptocurrency.As cryptocurrencies are internet money there will be a high chance of being scammed.So do your own research before investing in the crypto ,also make sure the genuinity of the exchange you are
-                using and check the domain of website of your wallet interacting with.
-            </p>
-        </div>
-
-        <!-- App Container-->
-
-        <!-- App Container-->
-
-        <!-- App Container-->
     </div>
     <!-- App Container end-->
     <div id="navigation">
         <div id="navigationcont">
-            <div id="home"><button id="terms.html" class="sbrbtn" onclick="changeiframe(this)"><img class="navimg" src="res/homme.webp"></button> </div>
-            <div id="expe"><button id="terms.html" class="sbrbtn" onclick="changeiframe(this)"><img class="navimg" src="res/moneymanager.webp"></button> </div>
-            <div id="reso"><button id="resourcepage.html" class="sbrbtn" onclick="changeiframe(this)"><img class="navimg" src="res/resource.webp"></button> </div>
-            <div id="quiz"><button id="terms.html" class="sbrbtn" onclick="changeiframe(this)"><img class="navimg" src="res/quiz.webp"></button> </div>
-            <div id="prof"><button id="profile.html" class="sbrbtn" onclick="changeiframe(this)"><img class="navimg" src="res/profile.webp"></button> </div>
+            <div><button onclick="changeapplet('home')"><img class="navimg" src="res/homme.webp"></button> </div>
+            <div><button onclick="changeapplet('expence')"><img class="navimg" src="res/moneymanager.webp"></button> </div>
+            <div><button onclick="changeapplet('resources')"><img class="navimg" src="res/resource.webp"></button> </div>
+            <div><button onclick="changeapplet('quiz')"><img class="navimg" src="res/quiz.webp"></button> </div>
+            <div><button onclick="changeapplet('profilepage')"><img class="navimg" src="res/profile.webp"></button> </div>
 
         </div>
     </div>

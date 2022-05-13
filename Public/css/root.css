@@ -1,30 +1,3 @@
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-
-/* declaring variables */
-
-:root {
-    --f_fam: 'arial';
-    --f_size: 100%;
-    --Prim_col: #1455e0;
-    --primdark_col: #1c0452;
-    --animfast: '100ms';
-    --animslow: '400ms';
-    --pad: 3%;
-    --bordrad: 5px;
-}
-
-body {
-    font-family: var(--f_fam);
-    font-size: var(--f_size);
-    animation-duration: var(--animfast);
-    padding-left: var(--pad);
-    padding-right: var(--pad);
-}
-
 a {
     color: var(--Prim_col);
 }

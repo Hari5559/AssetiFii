@@ -1,5 +1,9 @@
-function changeiframe(obj) {
-    var id = obj.id;
-    console.log(id);
-    document.getElementById("pageview").src = id;
+function changeapplet(page) {
+
+    console.log(page);
+    var applets = document.getElementsByClassName("appbody");
+    for (var i = 0; i < applets.length; i++) {
+        applets[i].style.display = "none";
+    }
+    document.getElementById(page).style.display = "block";
 }

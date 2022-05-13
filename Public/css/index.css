@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+.appbody {
+    display: none;
+}
+
 
 /* declaring variables */
 
@@ -31,6 +35,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
 }
 
 #navigationcont {
@@ -46,23 +51,17 @@ body {
     margin-right: auto;
 }
 
-#pageview {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-#Resourcecontainer {
-    height: 50vh;
+#resources {
+    height: 40vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
-    background-color: aqua;
+    background-color: black;
 }
 
 #resouceHeading {
-    /* css of the main heading*/
     text-align: center;
     background-color: rgb(47, 197, 37);
     color: white;
@@ -71,12 +70,11 @@ body {
 }
 
 .resouceBtn {
-    /* css of the buttons   */
     text-decoration: none;
     font-size: larger;
+    background-color: transparent;
+    border: none;
     color: bisque;
-    position: relative;
-    top: 30%;
 }
 
 .resourceitem:hover {
@@ -84,7 +82,6 @@ body {
 }
 
 .resourceitem {
-    /*css of the contents in side the container*/
     height: 10vh;
     background-color: black;
     border-radius: 50px;
