@@ -97,7 +97,7 @@ body {
 }
 
 .navimg {
-    width: 10vw;
+    width: 8vh;
     background-color: #1455e0;
 }
 
@@ -137,8 +137,119 @@ body {
     background-color: rgb(18, 7, 99);
 }
 
+.card {
+    background-color: #333333;
+    color: azure;
+    border-radius: var(--bordrad);
+    width: clamp(300px, 50%, 800px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+}
+
+.userd {
+    height: 10%;
+    width: 100%;
+    font-size: larger;
+}
+
+
+/* styling Ids */
+
+#userdata {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#user_image {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.loginoutbutton {
+    background-color: blue;
+    border: none;
+    color: rgb(236, 217, 198);
+    font-size: larger;
+    text-decoration: none;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 30px;
+}
+
 .loginoutbutton:hover {
     background-color: rgb(25, 15, 87);
+}
+
+a {
+    color: var(--Prim_col);
+}
+
+a:hover {
+    color: var(--primdark_col);
+}
+
+
+/* styling of classes */
+
+.mainhead {
+    text-align: center;
+    font-weight: 600;
+    font-style: oblique;
+    font-size: 200%;
+}
+
+.sechead {
+    text-align: left;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 150%;
+}
+
+.par {
+    text-align: justify;
+    font-size: 110%;
+    font-weight: 520;
+}
+
+.centimg {
+    margin: 2%;
+    width: 96%;
+    border: none;
+    border-radius: var(--bordrad);
+}
+
+.portimg {
+    margin: 2%;
+    margin-left: 25%;
+    width: 50%;
+    border: none;
+    border-radius: var(--bordrad);
+}
+
+
+/* media query to set styling for big screens */
+
+@media screen and (min-width: 1000px) {
+    .mainhead {
+        font-size: 300%;
+    }
+    .sechead {
+        font-size: 200%;
+    }
+    .par {
+        font-size: 120%;
+    }
+    .centimg {
+        margin: 2%;
+        width: 50%;
+        margin-left: 25%;
+    }
 }
 
 ::-webkit-scrollbar {
