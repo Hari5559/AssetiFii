@@ -1,3 +1,4 @@
+//////////////////////////// set the scores of user //////////////////////////////
 function setscores() {
     var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
 
@@ -10,6 +11,10 @@ function setscores() {
     });
 }
 
+
+
+
+////////////////////////// update the score of user //////////////////////////////
 function updatescore(sc, lv, g) {
 
     var ref = firebase.database().ref('users/' + user.uid + '/scores/');
@@ -27,6 +32,8 @@ function updatescore(sc, lv, g) {
     });
 
 }
+
+////////////////////////////// add the expence of user //////////////////////////////
 
 function addexpence() {
     var amt = document.getElementById('amt').value;

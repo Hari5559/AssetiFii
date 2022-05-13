@@ -1,53 +1,49 @@
+////////////////// to be called on page load //////////////////////////
+var j = 0;
 carouselcall();
+checkAuthState();
 
+///////////////// Helper Functions /////////////////////////////////////////////
+
+function id(item) {
+    return document.getElementById(item);
+}
+
+function classes(item) {
+    return document.getElementsByClassName(item);
+}
+
+
+/////////////////// Function for changing Functions  ////////////////////////////
 
 function changeapplet(page) {
-    var applets = document.getElementsByClassName("appbody");
+    var applets = classes("appbody");
     for (var i = 0; i < applets.length; i++) {
         applets[i].style.display = "none";
     }
-    document.getElementById(page).style.display = "block";
+    id(page).style.display = "block";
 }
 
-var j = 0;
+////////////////// function for wallpaper carousel  ///////////////////////////////
 
 function carouselcall() {
     setInterval(function() {
-        car();
+        var carimgs = classes("carousal-image");
+        for (i = 0; i < carimgs.length; i++) {
+            carimgs[i].style.display = "none";
+        }
+        carimgs[j].style.display = "block";
         j = j % 3 + 1;
     }, 4000);
 
 }
 
-function car() {
-    var carimgs = document.getElementsByClassName("caa");
-    for (i = 0; i < carimgs.length; i++) {
-        carimgs[i].style.display = "none";
+////////////////// Function to show or hide the quiz cards  //////////////////////////
+function showhide(code) {
+    item = id(code);
+    if (item.style.display == "none") {
+        item.style.display = "block";
+        return
     }
-    carimgs[j].style.display = "block";
-}
-
-carouselcall();
-
-const submenu = document.querySelector('.sub-menu');
-const navLinks = document.querySelector('#quizlinks');
-const links = document.querySelectorAll('#quizlinks li');
-var a;
-
-
-submenu.addEventListener('click', () => {
-
-    navLinks.classList.toggle('show');
-
-    links.forEach(link => {
-        link.addEventListener('click', collapse);
-
-
-    });
-});
-
-
-function collapse() {
-    navLinks.classList.remove('show');
-
+    item.style.display = "none";
 }

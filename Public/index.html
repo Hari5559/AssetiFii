@@ -10,8 +10,6 @@
     <link rel="shortcut icon" href="res/logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/prof.css">
-    <link rel="stylesheet" href="css/root.css">
 
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js" defer></script>
@@ -19,7 +17,7 @@
 
     <script src="js/firebase.js" defer></script>
     <script src="js/functions.js" defer></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
 </head>
 
 <body>
@@ -31,12 +29,12 @@
         <div id="home" class="appbody">
             <header class="Hheading">ASSETIFY</header>
 
-            <div class="Imagebanner">
-                <div class="carousel-image">
-                    <img src="res/1.webp" class="caa" alt="img1" />
-                    <img src="res/2.webp" class="caa" alt="img2" />
-                    <img src="res/3.webp" class="caa" alt="img3" />
-                    <img src="res/1.webp" class="caa" alt="img4" />
+            <div class="banner">
+                <div class="carousel">
+                    <img src="res/1.webp" class="carousal-image" alt="img1" />
+                    <img src="res/2.webp" class="carousal-image" alt="img2" />
+                    <img src="res/3.webp" class="carousal-image" alt="img3" />
+                    <img src="res/1.webp" class="carousal-image" alt="img4" />
                 </div>
             </div>
 
@@ -55,54 +53,56 @@
                 <!--container contains the rowBtn -->
 
                 <div class="rowitem">
-                    <button id="" class="rowBtn">
-              Stock Ecxhange quiz
-              <div class="sub-menu">
-                <ul id="quizlinks">
-                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScblpjt6giQbP1XW6DyfhXsxB2dhWj8_5S0vHiplC94h-wzYA/viewform?usp=sf_link">week 1</a></li>
-                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdk86jHuBVVluWVKUu4odp5SnBO5bz1O24mFbyHRRdhGF6smA/viewform?usp=sf_link">week2</a></li>
-                  <li><a href="">week3</a></li>
-                </ul>
-              </div>
-            </button>
+                    <button id="" class="rowBtn" onclick="showhide('stockquiz')">Stock Ecxhange quiz </button></div>
+
+                <div class="quizlinks" id="stockquiz">
+                    <ul>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScblpjt6giQbP1XW6DyfhXsxB2dhWj8_5S0vHiplC94h-wzYA/viewform?usp=sf_link">week 1</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdk86jHuBVVluWVKUu4odp5SnBO5bz1O24mFbyHRRdhGF6smA/viewform?usp=sf_link">week2</a></li>
+                        <li><a href="">week3</a></li>
+                    </ul>
                 </div>
+
+
                 <div class="rowitem">
-                    <button id="" class="rowBtn">
-              Crypto quiz
-    
-              <div class="sub-menu">
-                <ul id="quizlinks">
-                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnrzXRQqFGvTm05_iEiQzl2KY-00kgz-Urk1ZtH5KEzcnlAQ/viewform?usp=sf_link">week 1</a></li>
-                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc4I2cuk7A07nOCVHZqRxkfe_m4fmWkXUN-3P6mFmbP9G31qg/viewform?usp=sf_link">week2</a></li>
-                  <li><a href="">week3</a></li>
-                </ul>
-              </div>
-            </button>
+                    <button id="" class="rowBtn" onclick="showhide('cryptoquiz')"> Crypto quiz  </button>
+                </div>
+
+
+                <div class="quizlinks" id="cryptoquiz">
+                    <ul>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnrzXRQqFGvTm05_iEiQzl2KY-00kgz-Urk1ZtH5KEzcnlAQ/viewform?usp=sf_link">week 1</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc4I2cuk7A07nOCVHZqRxkfe_m4fmWkXUN-3P6mFmbP9G31qg/viewform?usp=sf_link">week2</a></li>
+                        <li><a href="">week3</a></li>
+                    </ul>
+
+
                 </div>
             </div>
         </div>
         <!-- resources page-->
         <div class="appbody" id="resourcesss">
-
-            <div class="rowitem">
-                <button class="rowBtn" onclick="changeapplet('stock')">
+            <div class="rowcontainer">
+                <div class="rowitem">
+                    <button class="rowBtn" onclick="changeapplet('stock')">
                   Stocks
                 </button>
-            </div>
-            <div class="rowitem">
-                <button class="rowBtn" onclick="changeapplet('crypto')">
+                </div>
+                <div class="rowitem">
+                    <button class="rowBtn" onclick="changeapplet('crypto')">
                   Crypto
                 </button>
-            </div>
-            <div class="rowitem">
-                <button class="rowBtn" onclick="changeapplet('freelancing')">
+                </div>
+                <div class="rowitem">
+                    <button class="rowBtn" onclick="changeapplet('freelancing')">
                   Affiliate marketing
                 </button>
-            </div>
-            <div class="rowitem">
-                <button class="rowBtn" onclick="changeapplet('tutor')">
+                </div>
+                <div class="rowitem">
+                    <button class="rowBtn" onclick="changeapplet('tutor')">
                   Tutoring
                 </button>
+                </div>
             </div>
         </div>
 
