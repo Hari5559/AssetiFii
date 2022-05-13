@@ -12,18 +12,17 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js" defer></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js" defer></script>
     <script src="js/firebase.js" defer></script>
+    <script src="js/functions.js" defer></script>
 </head>
 
 <body>
     <div id="divlogn"><button onclick="signinout()">login</button> </div>
     <div class="card" id="userdata">
         <img id="user_image" src="res/defuser.webp">
-        <div id="userdet">
+        <div id="scorelist">
             <p class="userd" id="user_name"> Name : username</p>
-            <p class="userd" id="user_score">total: $350</p>
-            <p class="userd" id="user_level">Level: 1</p>
-            <p class="userd" id="User_goals">Goals: 10/30</p>
         </div>
+        <button onclick="signinout()">logout</button>
 
     </div>
 
