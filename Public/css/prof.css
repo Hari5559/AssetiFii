@@ -1,8 +1,8 @@
 .card {
-    background-color: var(--darkbg);
+    background-color: #333333;
     color: azure;
     border-radius: var(--bordrad);
-    width: 90%;
+    width: 70vw;
     margin-top: 5%;
     margin-left: 5%;
 }
