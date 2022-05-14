@@ -21,7 +21,7 @@ function submitquiz(quizid) {
             var answersRef = firebase.database().ref('quizzes/' + quizid + '/answers/');
             answersRef.once('value', function(snapshot) {
                 var answers = snapshot.val();
-                var questions = classes("quizquestion");
+                var questions = classes("qtns");
                 var score = 0;
                 for (var i = 0; i < questions.length; i++) {
 
@@ -43,7 +43,8 @@ function submitquiz(quizid) {
 
 //set answers to firebase 
 function setanswers(quizid) {
-    var questions = classes("quizquestion");
+    var questions = classes("qtns");
+    console.log(questions);
     for (var i = 0; i < questions.length; i++) {
         var question = document.getElementById('question' + (i + 1));
         var answersRef = firebase.database().ref('quizzes/' + quizid + '/answers/' + i);
