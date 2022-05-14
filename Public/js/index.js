@@ -58,7 +58,7 @@ async function getTrend() {
     for (i = 0; i < 7; i++) {
         coinname = coinlist[i].item.name;
 
-        coinprice = Math.round(coinlist[i].item.price_btc * 30000 * 70) / 100;
+        coinprice = Math.round(coinlist[i].item.price_btc * 30000 * 70);
         if (coinprice == 0) {
 
             coinprice = '> ₹0.01';
