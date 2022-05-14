@@ -6,7 +6,7 @@
 .quizheader {
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -17,16 +17,25 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    color: rgb(0, 0, 0);
+    color: #030303;
     font-size: x-large;
+   
 }
 
+
+
+
 select {
-    background: #062e85;
-    color: #fff;
+    background:#8a9af0;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 100%;
+    width:50vw;
+}
+select:hover{
+    
+    background:#8091f0;
 }
 
 select:focus {
