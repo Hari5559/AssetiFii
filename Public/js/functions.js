@@ -1,13 +1,13 @@
 //////////////////////////// set the scores of user //////////////////////////////
 function setscores(scoree) {
 
-    var ref = firebase.database().ref('users/' + firebase.auth().currentUser.u + '/scores/');
+    var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
     ref.once('value', function(snapshot) {
         var scores = snapshot.val();
         if (scores == null) {
             scores = [];
             scores.push({
-                score: scoree,
+                score: 0,
                 level: 0,
             });
         } else {
@@ -30,6 +30,8 @@ function setscores(scoree) {
 
         }
         localStorage.setItem('scores', JSON.stringify(scores));
+        id('score').innerHTML = scores.score;
+        id('level').innerHTML = scores.level;
     })
 }
 
