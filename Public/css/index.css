@@ -96,8 +96,6 @@ body {
 .carousal-image {
     background-color: rgb(116, 190, 190);
     height: 30vh;
-    
-    
 }
 
 .banner {
@@ -130,8 +128,10 @@ body {
 }
 
 .list-group-item {
-    border: none;
+    margin-bottom: 1vh;
     display: flex;
+    padding-top: 1vh;
+    padding: 1vh;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +139,7 @@ body {
     height: 30%;
     color: rgb(255, 255, 255);
     background-color: rgb(65, 65, 65);
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 
@@ -167,7 +167,6 @@ body {
     font-size: 130%;
     font-weight: 520;
     line-height: 30px
-
 }
 
 .centimg {

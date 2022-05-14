@@ -5,7 +5,7 @@ function setscores() {
     intref.once('value', function(snapshot) {
         var user = snapshot.val();
         if (user.score == undefined) {
-            intref.update({
+            intref.set({
                 score: 0,
                 level: 0,
                 goals: 0
@@ -18,7 +18,13 @@ function setscores() {
 
     ref.once('value', function(snapshot) {
         var scores = snapshot.val();
-        console.log(scores);
+        if (scores.score == null) {
+            ref.set({
+                score: 0,
+                level: 0,
+                goals: 0
+            });
+        }
         document.getElementById('score').innerHTML = 'score: ' + scores.score;
         document.getElementById('level').innerHTML = 'level: ' + scores.level;
         document.getElementById('goals').innerHTML = 'goals: ' + scores.goals;
@@ -29,19 +35,19 @@ function setscores() {
 
 
 ////////////////////////// update the score of user //////////////////////////////
-function updatescore(sc, lv, g) {
+function updatescore(sc) {
 
     var ref = firebase.database().ref('users/' + user.uid + '/scores/');
     ref.once('value', function(snapshot) {
         var scores = snapshot.val();
+        var oldscore = scores.score % 100;
         scores.score += sc;
-        scores.level += lv;
-        scores.goals += g;
-        ref.set({
-            score: score,
-            level: level,
-            goals: goals,
-        });
+        var newscore = scores.score % 100;
+        if (newscore > oldscore) {
+            scores.level += 1;
+        }
+        ref.update(scores);
+
 
     });
 
@@ -73,7 +79,7 @@ fetch('https://yh-finance.p.rapidapi.com/auto-complete?q=india&region=IN', optio
 function showstockdata(data) {
     var quotes = data.quotes;
     var stockdata = '';
-    for (var i = 0; i < quotes.length; i++) {
+    for (var i = 1; i < quotes.length; i++) {
         stockdata += '<li class="list-group-item"><div class="stcknme">' + quotes[i].shortname + ' </div> <div class="stckscre">Score:' + quotes[i].score + '</div></li>';
     }
     id('stocklist').innerHTML = stockdata;
