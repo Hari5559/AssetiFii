@@ -37,7 +37,7 @@ function setscores() {
 ////////////////////////// update the score of user //////////////////////////////
 function updatescore(sc) {
 
-    var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
+    var ref = firebase.database().ref('users/' + firebase.auth().currentUser.u + '/scores/');
     ref.once('value', function(snapshot) {
         var scores = snapshot.val();
         var oldscore = scores.score % 100;

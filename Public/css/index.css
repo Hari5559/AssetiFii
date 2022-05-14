@@ -128,11 +128,11 @@ body {
 }
 
 .list-group-item {
-    margin-top: 0.5vh;
     display: flex;
+    flex-direction: row;
+    margin-top: 0.5vh;
     padding-top: 1vh;
     padding: 1vh;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 90%;
@@ -145,24 +145,45 @@ body {
 
 /* expense manager */
 
-#addexpencee {
-    display: inline-block;
+.expenceadds {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: #e2c7b2;
+    width: 80%;
+    margin-left: 6%;
+    margin-top: 5%;
     margin-bottom: 5%;
+    border-radius: 20px;
+    padding: 2%;
 }
 
-#addincome {
-    display: inline-block;
+.expenceadds div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    width: 10%;
+    height: .5vh;
+    margin-top: .2vh;
+    margin-bottom: 1vh;
 }
 
 .add {
-    height: 5vh;
+    margin: 1%;
+    height: 3vh;
     width: 10vw;
     color: #38cf6a;
     border-radius: 5px;
     background-color: rgb(16, 164, 58);
     cursor: pointer;
+}
+
+.inpttext {
+    border: 1px;
+    border-radius: 5px;
+    height: 3vh;
+    padding-left: 2vh;
 }
 
 
@@ -174,8 +195,7 @@ body {
     font-style: oblique;
     font-size: 220%;
     margin-top: 3vh;
-    margin-bottom:1vh;
-
+    margin-bottom: 1vh;
 }
 
 .sechead {
@@ -258,7 +278,7 @@ ul {
     background-color: rgb(230, 230, 233);
     border: none;
     color: rgb(10, 10, 10);
-    width:60%;
+    width: 60%;
     height: 10%;
     font-size: larger;
     text-decoration: none;
@@ -270,7 +290,6 @@ ul {
 .loginoutbutton:hover {
     background-color: rgb(132, 131, 138);
     border-radius: 5px;
-    
 }
 
 .card {
@@ -300,7 +319,7 @@ ul {
     font-size: 250%;
     color: aliceblue;
     background-color: rgb(18, 7, 99);
-    padding-top:1%;
+    padding-top: 1%;
 }
 
 .rowcontainer {
