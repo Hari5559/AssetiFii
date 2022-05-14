@@ -21,61 +21,35 @@
 
     <div class="quizbody">
         <div class="quizheader">
-            <div class="quiztitle">
-                <h1>Quiz Week [Number]</h1>
-            </div>
-            <div class="quiznav">
-                <div class="quiznavbutton">
-                    <a href="../index.html">Home</a>
-                </div>
-                <div class="quiznavbutton">
-                    <a href="../quiz/quizdemo.html">Quiz</a>
-                </div>
-                <div class="quiznavbutton">
-                    <a href="../quiz/quizdemo.html">Leaderboard</a>
-                </div>
-                <div class="quiznavbutton">
-                    <a href="../quiz/quizdemo.html">About</a>
-                </div>
-            </div>
+            <h1>Quiz Week [Number]</h1>
+
         </div>
         <div class="quizcontent">
             <div class="quizquestion">
                 <h2>Question 1</h2>
                 <p>What is the capital of India?</p>
                 <div class="quizanswer">
-                    <input type="radio" name="question1" value="1">
-                    <label for="question1">New Delhi</label>
-                </div>
-                <div class="quizanswer">
-                    <input type="radio" name="question1" value="2">
-                    <label for="question1">Mumbai</label>
-                </div>
-                <div class="quizanswer">
-                    <input type="radio" name="question1" value="3">
-                    <label for="question1">Chennai</label>
-                </div>
-                <div class="quizanswer">
-                    <input type="radio" name="question1" value="4">
-                    <label for="question1">Kolkata</label>
+                    <select id="question2">
+                        <option value="1">New Delhi</option>
+                        <option value="2">Mumbai</option>
+                        <option value="3">Chennai</option>
+                        <option value="4">Kolkata</option>
+                    </select>
                 </div>
             </div>
             <div class="quizquestion">
                 <h2>Question 2</h2>
                 <p>What is the capital of India?</p>
                 <div class="quizanswer">
-                    <input type="radio" name="question2" value="1">
-                    <label for="question2">New Delhi</label>
-                    <input type="radio" name="question2" value="2">
-                    <label for="question2">Mumbai</label>
-                    <input type="radio" name="question2" value="3">
-                    <label for="question2">Chennai</label>
-                    <input type="radio" name="question2" value="4">
+                    <select id="question2">
+                        <option value="1">New Delhi</option>
+                        <option value="2">Mumbai</option>
+                        <option value="3">Chennai</option>
+                        <option value="4">Kolkata</option>
+                    </select>
                 </div>
-
-                <!--Complete the remaining Like this-->
-
             </div>
+            <!--Complete the remaining Like this-->
         </div>
         <div id="submitdiv">
             <button id="submitbutton" onclick="submitquiz('s1')">Submit</button>
