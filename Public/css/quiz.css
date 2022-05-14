@@ -19,23 +19,19 @@
     margin-right: auto;
     color: #030303;
     font-size: x-large;
-   
 }
 
-
-
-
 select {
-    background:#8a9af0;
+    background: #0f1c66;
     color: rgb(255, 255, 255);
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 100%;
-    width:50vw;
+    width: 50vw;
 }
-select:hover{
-    
-    background:#8091f0;
+
+select:hover {
+    background: #46508a;
 }
 
 select:focus {
@@ -56,7 +52,6 @@ select option {
     margin-top: 25vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: #4b4b4b;
     border-radius: 20px;
 }
 
@@ -79,4 +74,12 @@ select option {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .quizbody {
+        width: 60%;
+        margin-left: 20%;
+        background-color: rgb(228, 203, 171);
+    }
 }

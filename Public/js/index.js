@@ -71,7 +71,7 @@ async function getTrend() {
         trend += '<li class="list-group-item"><div class="stcknme">' + coinname + ' </div> <div class="stckscre"> Price ' + coinprice + '</div></li>';
 
     }
-    document.getElementById('cryptolist').innerHTML = trend;
+    document.getElementById('cryptolist').innerHTML += trend;
 
 
 

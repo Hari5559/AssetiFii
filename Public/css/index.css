@@ -40,6 +40,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1vw;
+    background-color: rgba(223, 223, 223, 0.712);
 }
 
 #appcontainer {
@@ -64,7 +66,7 @@ body {
 
 #navigationcont {
     width: clamp(350px, 60%, 1500px);
-    height: 10vh;
+    height: 8vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -74,16 +76,17 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+    margin-bottom: 2vh;
 }
 
 .navimg {
-    width: clamp(5vw, 50px, 150px);
+    width: clamp(3vw, 50px, 120px);
     background-color: #1455e0;
 }
 
 .navbtn {
     border-radius: 50%;
-    background-color: #1455e0;
+    background-color: #00277a;
 }
 
 
@@ -123,7 +126,7 @@ body {
     height: 40vh;
     width: 100%;
     margin-top: 1vw;
-    background-color: rgb(247, 240, 240);
+    background-color: rgba(0, 0, 0, 0);
     color: #fff;
 }
 
@@ -173,9 +176,9 @@ body {
     margin: 1%;
     height: 3vh;
     width: 10vw;
-    color: #38cf6a;
+    color: #ffffff;
     border-radius: 5px;
-    background-color: rgb(16, 164, 58);
+    background-color: rgb(37, 146, 68);
     cursor: pointer;
 }
 
@@ -194,8 +197,8 @@ body {
     font-weight: 600;
     font-style: oblique;
     font-size: 220%;
-    margin-top: 3vh;
-    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-bottom: .5vh;
 }
 
 .sechead {
@@ -209,7 +212,7 @@ body {
     text-align: justify;
     font-size: 110%;
     font-weight: 520;
-    line-height: 30px
+    line-height: 25px
 }
 
 ul {
@@ -410,6 +413,10 @@ a:hover {
     .homepagebody {
         flex-direction: row;
         width: 100%;
+    }
+    .rrrr {
+        width: 60%;
+        margin-left: 20%;
     }
 }
 
