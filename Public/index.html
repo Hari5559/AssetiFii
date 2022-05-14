@@ -60,36 +60,35 @@
             </div>
 
             <div class="homepagebody">
+                expense List
                 <div class="list-group-item" id="expencelistt"></div>
+                Income List
                 <div class="list-group-item" id="incomelistt"></div>
             </div>
 
-            <div id="addexpence">
-                <input type="text" name="amount" class="inp" placeholder="Amount" id="expamount" />
-                <select id="expcategory">
-                        <option value="Food">Food</option>
-                        <option value="Transport">Transport</option>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Shopping">Shopping</option>
-                        <option value="Education">Education</option>
-                        <option value="Others">Others</option>
-                    </select>
+            <div id="addexpencee">
+                <input type="text" name="amount" placeholder="Amount" id="exmount" />
+                <label for="food">Food</label>
+                <input type="radio" id="excategory" value="Food" />
+                <label for="food">Travel</label>
+                <input type="radio" id="excategory" value="Travell" />
+                <label for="food">Entertainment</label>
+                <input type="radio" id="excategory" value="Entertainment" />
 
                 <!--here is where i left off i should add button to store expences-->
-                <button class="inp" onclick="addexpence()">Add</button>
+                <button onclick="addexpence()" class="add">Add</button>
             </div>
             <div id="addincome">
                 <input type="text" name="amount" placeholder="Amount" id="incmount" />
-                <select id="expcategory">
-                        <option value="Tutoring">tutoring</option>
-                        <option value="crypto">Crypto</option>
-                        <option value="stock">Stock</option>
-                        <option value="freelancing">freelancing</option>
-                        <option value="others">Others</option>
-                    </select>
+                <label for="food">Freelancing</label>
+                <input type="radio" id="incategory" value="Free lancing" />
+                <label for="food">Stock</label>
+                <input type="radio" id="incategory" value="stocks" />
+                <label for="food">crypto Investment</label>
+                <input type="radio" id="incategory" value="Crypto" />
 
                 <!--here is where i left off i should add button to store expences-->
-                <button onclick="addincome()">Add</button>
+                <button onclick="addincome()" class="add">Add</button>
             </div>
         </div>
         <!-- quiz -->

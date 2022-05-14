@@ -3,7 +3,8 @@ const cryptoapi = 'https://api.coingecko.com/api/v3/search/trending';
 var j = 0;
 carouselcall();
 checkAuthState();
-getTrend();
+setincomeandexpence();
+// -----------------------  getTrend();---------------------------------
 
 ///////////////// Helper Functions /////////////////////////////////////////////
 
@@ -78,3 +79,76 @@ async function getTrend() {
 ////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
+function addincome() {
+    var amt = id('incmount').value;
+    var cat = id('incategory').value;
+    id('incomelistt').innerHTML += '<li class="list-group-item" > <div class = "stcknme" > ' + cat + ' </div> <div class="stckscre">₹ ' + amt + '</div > </li>';
+    id('incmount').value = 'tutoring';
+    // add to local storage
+    var inc = JSON.parse(localStorage.getItem('income'));
+    if (inc == null) {
+        inc = [];
+    }
+    inc.push({
+        amount: amt,
+        category: cat
+    });
+    localStorage.setItem('income', JSON.stringify(inc));
+    // add to firebase
+
+    var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/income/');
+    ref.push({
+        amount: amt,
+        category: cat
+    });
+
+    // update the score
+    updatescore(10);
+    // clear the input
+
+}
+
+function addexpence() {
+    var amt = id('exmount').value;
+    var cat = id('excategory').value;
+    id('expencelistt').innerHTML += '<li class="list-group-item" > <div class = "stcknme" > ' + cat + ' </div> <div class="stckscre">₹ ' + amt + '</div > </li>';
+    id('exmount').value = 'tutoring';
+    // add to local storage
+    var exp = JSON.parse(localStorage.getItem('expence'));
+    if (exp == null) {
+        exp = [];
+    }
+    exp.push({
+        amount: amt,
+        category: cat
+    });
+    localStorage.setItem('expence', JSON.stringify(exp));
+    // add to firebase
+
+    var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/expence/');
+    ref.push({
+        amount: amt,
+        category: cat
+    });
+
+    // update the score
+    updatescore(10);
+    // clear the input
+
+}
+
+////////////////// set income and expence from local storage////////////////////////////////
+function setincomeandexpence() {
+    var inc = JSON.parse(localStorage.getItem('income'));
+    var exp = JSON.parse(localStorage.getItem('expence'));
+    if (inc != null) {
+        for (i = 0; i < inc.length; i++) {
+            id('incomelistt').innerHTML += '<li class="list-group-item" > <div class = "stcknme" > ' + inc[i].category + ' </div> <div class="stckscre">₹ ' + inc[i].amount + '</div > </li>';
+        }
+    }
+    if (exp != null) {
+        for (i = 0; i < exp.length; i++) {
+            id('expencelistt').innerHTML += '<li class="list-group-item" > <div class = "stcknme" > ' + exp[i].category + ' </div> <div class="stckscre">₹ ' + exp[i].amount + '</div > </li>';
+        }
+    }
+}

@@ -145,6 +145,26 @@ body {
 
 /* expense manager */
 
+#addexpencee {
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+#addincome {
+    display: inline-block;
+    align-items: center;
+}
+
+.add {
+    height: 5vh;
+    width: 10vw;
+    color: #38cf6a;
+    border-radius: 5px;
+    background-color: rgb(16, 164, 58);
+    cursor: pointer;
+}
+
 
 /* resources */
 
