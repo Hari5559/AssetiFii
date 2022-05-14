@@ -34,6 +34,14 @@ body {
 
 /* main elements and containers  */
 
+.rrrr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #appcontainer {
     width: 100vw;
     height: 90vh;
@@ -160,15 +168,14 @@ body {
 
 .centimg {
     margin: 2%;
-    width: 96%;
+    width: clamp(300px, 50%, 1500px);
     border: none;
     border-radius: var(--bordrad);
 }
 
 .portimg {
     margin: 2%;
-    margin-left: 25%;
-    width: 50%;
+    width: clamp(20vw, 50%, 500px);
     border: none;
     border-radius: var(--bordrad);
 }
@@ -318,11 +325,6 @@ a:hover {
     }
     .par {
         font-size: 120%;
-    }
-    .centimg {
-        margin: 2%;
-        width: 50%;
-        margin-left: 25%;
     }
     .homepagebody {
         flex-direction: row;

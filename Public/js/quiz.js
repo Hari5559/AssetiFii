@@ -10,28 +10,34 @@ function classes(item) {
 
 function submitquiz(quizid) {
     // go to setanswers if auth user is admin
-    console.log(firebase.auth().currentUser.email);
-    if (firebase.auth().currentUser.email == "sreejithksgupta2255@gmail.com") {
-        setanswers(quizid);
-    } else {
-        // get answer list from firebase
-        var answersRef = firebase.database().ref('quizzes/' + quizid + '/answers/');
-        answersRef.once('value', function(snapshot) {
-            var answers = snapshot.val();
-            var questions = classes("quizquestion");
-            var score = 0;
-            for (var i = 0; i < questions.length; i++) {
 
-                var question = document.getElementById('question' + (i + 1));
-                if (question.value == answers[i]) {
-                    score++;
+    //check if user is signed in else, ask to sign in
+    if (firebase.auth().currentUser) {
+        console.log(firebase.auth().currentUser.email);
+        if (firebase.auth().currentUser.email == "sreejithksgupta2255@gmail.com") {
+            setanswers(quizid);
+        } else {
+            // get answer list from firebase
+            var answersRef = firebase.database().ref('quizzes/' + quizid + '/answers/');
+            answersRef.once('value', function(snapshot) {
+                var answers = snapshot.val();
+                var questions = classes("quizquestion");
+                var score = 0;
+                for (var i = 0; i < questions.length; i++) {
+
+                    var question = document.getElementById('question' + (i + 1));
+                    if (question.value == answers[i]) {
+                        score++;
+                    }
                 }
-            }
-            id("scorecard").innerHTML = "You scored " + score + " out of " + questions.length;
+                id("scorecard").innerHTML = "You scored " + score + " out of " + questions.length;
 
-        });
+            });
 
 
+        }
+    } else {
+        id("scorecard").innerHTML = "Please sign in to submit the quiz";
     }
 }
 
