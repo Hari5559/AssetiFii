@@ -63,7 +63,7 @@ body {
 /* navigation Bar */
 
 #navigationcont {
-    width: clamp(300px, 60%, 1500px);
+    width: clamp(350px, 60%, 1500px);
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -128,7 +128,7 @@ body {
 }
 
 .list-group-item {
-    margin-bottom: 1vh;
+    margin-top: 0.5vh;
     display: flex;
     padding-top: 1vh;
     padding: 1vh;
@@ -213,6 +213,14 @@ ul {
 
 /* profile  */
 
+#loginbtnnn {
+    display: block;
+    width: 80vw;
+    height: 10vh;
+    margin-top: 40vh;
+    margin-left: 6vw;
+}
+
 #userdata {
     display: flex;
     flex-direction: column;
@@ -295,7 +303,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin:2%;
+    margin: 2%;
     height: 10vh;
     background-color: rgb(139, 12, 12);
     border-radius: 10px;
@@ -312,7 +320,8 @@ ul {
     width: 100%;
     height: 20%;
 }
-.quizlinks li{
+
+.quizlinks li {
     color: #1455e0;
     background-color: #333333;
     margin-top: 1vh;
@@ -320,7 +329,8 @@ ul {
     padding: 1vh;
     border-radius: 10px;
 }
-.quizlinks li:hover{
+
+.quizlinks li:hover {
     background-color: #19191a;
     color: #38cf6a;
 }

@@ -50,7 +50,6 @@ function signinout() {
     } else {
         firebase.auth().signInWithPopup(provider).then(res => {
             usr = res.user;
-            console.log("signed in");
             setuserdata(usr.displayName, usr.photoURL);
         }).catch(e => {
             console.log(e)
