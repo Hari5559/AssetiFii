@@ -153,6 +153,7 @@ body {
     font-weight: 600;
     font-style: oblique;
     font-size: 220%;
+    margin-bottom:3vh;
 }
 
 .sechead {
@@ -164,10 +165,19 @@ body {
 
 .par {
     text-align: justify;
-    font-size: 130%;
+    font-size: 110%;
     font-weight: 520;
-    line-height: 30px
+    line-height: 30px;
+    margin-top: 1vh;
+    margin-bottom:2vh ;
 
+}
+ul{
+    font-size: 110%;
+    font-weight: 520;
+    line-height: 30px;
+    margin-top: 2vh;
+    margin-bottom:3vh ;
 }
 
 .centimg {
