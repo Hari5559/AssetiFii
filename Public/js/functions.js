@@ -35,9 +35,33 @@ function updatescore(score) {
 }
 
 
+/////////////////////////////////// set stock  /////////////////////////////////////
+/*
+
+const options = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com',
+        'X-RapidAPI-Key': '4e4a2192e5msh5fd6d76d261d433p1d6fdfjsn43786235137e'
+    }
+};
+
+fetch('https://yh-finance.p.rapidapi.com/auto-complete?q=tesla&region=US', options)
+    .then(response => response.json())
+    .then(response => showstockdata(response))
+    .catch(err => console.error(err));
 
 
+function showstockdata(data) {
+    var quotes = data.quotes;
+    var stockdata = '';
+    for (var i = 1; i < quotes.length; i++) {
+        stockdata += '<li class="list-group-item"><div class="stcknme">' + quotes[i].shortname + ' </div> <div class="stckscre">Score:' + quotes[i].score + '</div></li>';
+    }
+    id('stocklist').innerHTML = stockdata;
+}
 
+*/
 
 
 
@@ -163,25 +187,4 @@ function setscores(scoree) {
 
 ///////////////////// fetch Stock Data /////////////////////////////////
 
-const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com',
-        'X-RapidAPI-Key': '4765478682mshd45354dbd80fffep1c18c4jsnf34147d76223'
-    }
-};
-
-fetch('https://yh-finance.p.rapidapi.com/auto-complete?q=india&region=IN', options)
-    .then(response => response.json())
-    .then(response => showstockdata(response))
-    .catch(err => console.error(err));
-
-/////////////////////////////////// set stock  /////////////////////////////////////
-function showstockdata(data) {
-    var quotes = data.quotes;
-    var stockdata = '';
-    for (var i = 1; i < quotes.length; i++) {
-        stockdata += '<li class="list-group-item"><div class="stcknme">' + quotes[i].shortname + ' </div> <div class="stckscre">Score:' + quotes[i].score + '</div></li>';
-    }
-    id('stocklist').innerHTML = stockdata;
-}
+*/
