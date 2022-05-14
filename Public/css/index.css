@@ -24,7 +24,7 @@ body {
     font-family: var(--f_fam);
     font-size: var(--f_size);
     animation-duration: var(--animfast);
-    background-color: rgb(59, 11, 150);
+    background-image: linear-gradient(#e2c7b2, #6d606b, #F4F0E8);
     overscroll-behavior: none;
     box-sizing: border-box;
     margin: 0px;
@@ -87,6 +87,8 @@ body {
 .carousal-image {
     background-color: rgb(116, 190, 190);
     height: 30vh;
+    
+    
 }
 
 .banner {
@@ -141,20 +143,22 @@ body {
     text-align: center;
     font-weight: 600;
     font-style: oblique;
-    font-size: 200%;
+    font-size: 220%;
 }
 
 .sechead {
     text-align: left;
     font-weight: 500;
     font-style: italic;
-    font-size: 150%;
+    font-size: 170%;
 }
 
 .par {
     text-align: justify;
-    font-size: 110%;
+    font-size: 130%;
     font-weight: 520;
+    line-height: 30px
+
 }
 
 .centimg {
