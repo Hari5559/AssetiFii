@@ -1,0 +1,16 @@
+{
+    "folders": [
+		{
+			"name": "hackathon",
+			"path": "D:\\Programming\\WEB DEV\\New folder\\hackathon"
+		},
+		{
+			"name": "hack",
+			"path": "..\\.."
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "hack",
+        "liveServer.settings.port": 5501
+    }
+}

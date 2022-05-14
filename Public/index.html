@@ -54,17 +54,19 @@
         </div>
         <!-- expence manager -->
         <div id="expence" class="appbody">
-            <!--Expence management app using firebase-->
-            <div id="expencegraph">
-                Here there will be a graph
+
+            <div class="graphbanner">
+                <div class="graph-image"></div>
             </div>
-            <div id="expencelist">
-                here there will be a list of your expences
+
+            <div class="homepagebody">
+                <div class="list-group-item" id="expencelistt"></div>
+                <div class="list-group-item" id="incomelistt"></div>
             </div>
+
             <div id="addexpence">
-                <form id="addexpenceform">
-                    <input type="text" name="amount" placeholder="Amount" id="expamount" />
-                    <select id="expcategory">
+                <input type="text" name="amount" class="inp" placeholder="Amount" id="expamount" />
+                <select id="expcategory">
                         <option value="Food">Food</option>
                         <option value="Transport">Transport</option>
                         <option value="Entertainment">Entertainment</option>
@@ -73,9 +75,21 @@
                         <option value="Others">Others</option>
                     </select>
 
-                    <!--here is where i left off i should add button to store expences-->
-                    <input type="submit" onclick="sree()">Add</button>
-                </form>
+                <!--here is where i left off i should add button to store expences-->
+                <button class="inp" onclick="addexpence()">Add</button>
+            </div>
+            <div id="addincome">
+                <input type="text" name="amount" placeholder="Amount" id="incmount" />
+                <select id="expcategory">
+                        <option value="Tutoring">tutoring</option>
+                        <option value="crypto">Crypto</option>
+                        <option value="stock">Stock</option>
+                        <option value="freelancing">freelancing</option>
+                        <option value="others">Others</option>
+                    </select>
+
+                <!--here is where i left off i should add button to store expences-->
+                <button onclick="addincome()">Add</button>
             </div>
         </div>
         <!-- quiz -->
@@ -88,9 +102,11 @@
 
                 <div class="quizlinks" id="stockquiz">
                     <ul>
-                        <li><a href="quiz/quizdemo.html">week 1</a></li>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdk86jHuBVVluWVKUu4odp5SnBO5bz1O24mFbyHRRdhGF6smA/viewform?usp=sf_link">week2</a></li>
-                        <li><a href="">week3</a></li>
+                        <li ><a href="quiz/quiz1.html">week 1</a></li>
+                        <li ><a href="quiz/quiz2.html">week2</a></li>
+                        <li><a href="quiz/quiz1.html">week3</a></li>
+                        <li><a href="quiz/quiz2.html">week4</a></li>
+                        <li><a href="quiz/quiz1.html">week5</a></li>
                     </ul>
                 </div>
 
@@ -102,9 +118,11 @@
 
                 <div class="quizlinks" id="cryptoquiz">
                     <ul>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScnrzXRQqFGvTm05_iEiQzl2KY-00kgz-Urk1ZtH5KEzcnlAQ/viewform?usp=sf_link">week 1</a></li>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc4I2cuk7A07nOCVHZqRxkfe_m4fmWkXUN-3P6mFmbP9G31qg/viewform?usp=sf_link">week2</a></li>
-                        <li><a href="">week3</a></li>
+                        <li><a href="quiz/quiz3.html">week 1</a></li>
+                        <li><a href="quiz/quiz4.html">week2</a></li>
+                        <li><a href="quiz/quiz3.html">week3</a></li>
+                        <li><a href="quiz/quiz4.html">week4</a></li>
+                        <li><a href="quiz/quiz3.html">week5</a></li>
                     </ul>
 
 
@@ -139,8 +157,9 @@
 
         <!-- profile page container-->
         <div class="appbody" id="profilepage">
-            <div id="divlogn"><button class="loginoutbutton" onclick="signinout()">login</button> </div>
+            <div id="divlogn"><button class="loginoutbutton" id="loginbtnnn" onclick="signinout()">login</button> </div>
             <div class="card" id="userdata">
+                <img id="user_image">
                 <div id="scorelist">
                     <p class="userd" id="user_name"> Name : username</p>
                     <p id="score"></p>
@@ -241,213 +260,213 @@
             <!--freelancing-->
             <div class="appbody " id="freelancing">
                 <div class="rrrr">
-                <!-- Heading will be the mainhead class, it is bold, centerd and italic-->
-                <img class="centimg" src="res/freelancing logo.webp" alt=" logo img" defer/>
-                <h3 class="mainhead">Freelancing</h3>
+                    <!-- Heading will be the mainhead class, it is bold, centerd and italic-->
+                    <img class="centimg" src="res/freelancing logo.webp" alt=" logo img" defer/>
+                    <h3 class="mainhead">Freelancing</h3>
 
-                <h5 class="sechead">
-                    What is Freelancing & What Does it Mean to Freelance?
-                </h5>
-                <!-- Paragraph will be the Par class -->
-                <p class="par">
-                    You may be wondering, “so what is freelancing?” Freelancing means to work as an independent company rather than be employed by someone else. Freelancers are self-employed and often referred to as independent contractors. Freelancers are hired by other
-                    companies on a part time or short-term basis, but they do not receive the same compensation as full-time employees or have the same level of commitment to any particular company
+                    <h5 class="sechead">
+                        What is Freelancing & What Does it Mean to Freelance?
+                    </h5>
+                    <!-- Paragraph will be the Par class -->
+                    <p class="par">
+                        You may be wondering, “so what is freelancing?” Freelancing means to work as an independent company rather than be employed by someone else. Freelancers are self-employed and often referred to as independent contractors. Freelancers are hired by other
+                        companies on a part time or short-term basis, but they do not receive the same compensation as full-time employees or have the same level of commitment to any particular company
 
-                    <!-- a secondary heading is H5 tag and a class sechead-->
-                </p>
-                <h5 class="sechead">How does freelancing work?</h5>
-                <p class="par">
-                    Freelancers accept payment in return for providing some sort of service. That agreement is generally part-time or short term. For example, if I hired a photographer to take new headshots for me, I could pay a freelancer for that session and that would
-                    be the end of it. Sometimes people pay freelancers to work a set number of hours per week or per month. That arrangement is often referred to as a “retainer.” A retainer refers to when you retain the services or right to someone’s
-                    time. A lot of legal professional’s work on retainer. Every month, they bill a set amount of time to the client, regardless of whether that full time is used or not. It’s really one of the simplest and most pure forms of entrepreneurship:
-                    the freelancer provides a specific service or outcome, and the buyer pays them a fee directly
+                        <!-- a secondary heading is H5 tag and a class sechead-->
+                    </p>
+                    <h5 class="sechead">How does freelancing work?</h5>
+                    <p class="par">
+                        Freelancers accept payment in return for providing some sort of service. That agreement is generally part-time or short term. For example, if I hired a photographer to take new headshots for me, I could pay a freelancer for that session and that would
+                        be the end of it. Sometimes people pay freelancers to work a set number of hours per week or per month. That arrangement is often referred to as a “retainer.” A retainer refers to when you retain the services or right to someone’s
+                        time. A lot of legal professional’s work on retainer. Every month, they bill a set amount of time to the client, regardless of whether that full time is used or not. It’s really one of the simplest and most pure forms of entrepreneurship:
+                        the freelancer provides a specific service or outcome, and the buyer pays them a fee directly
 
-                    <!-- this is an inline link, bibance, grow and all other links should be inside this -->
-                </p>
+                        <!-- this is an inline link, bibance, grow and all other links should be inside this -->
+                    </p>
 
-                <h5 class="sechead">What role can you do as freelancer</h5>
-                <ul id="pointstyle">
-                    <li>.Writing and Translating</li>
-                    <li>.Graphic design</li>
-                    <li>.Programming and IT</li>
-                </ul>
+                    <h5 class="sechead">What role can you do as freelancer</h5>
+                    <ul id="pointstyle">
+                        <li>.Writing and Translating</li>
+                        <li>.Graphic design</li>
+                        <li>.Programming and IT</li>
+                    </ul>
 
-                <h5 class="sechead">1.Writing and Translating</h5>
+                    <h5 class="sechead">1.Writing and Translating</h5>
 
-                <p class="par">
-                    You could be asked to write blog posts, whole eBook() (under the condition that someone else's name appears on the front), product descriptions for online stores, or even Facebook post and tweets.
-                </p>
-                <p class="par">
-                    You could even try your hand at freelance journalism, writing pitches to magazines, newspapers and other publications.
-                </p>
-                <p class="par">
-                    Just be aware that some publishers (even big names) will try to take advantage of your student status and expect you to work for free. Ask about their rates before agreeing to write for them.
-                </p>
+                    <p class="par">
+                        You could be asked to write blog posts, whole eBook() (under the condition that someone else's name appears on the front), product descriptions for online stores, or even Facebook post and tweets.
+                    </p>
+                    <p class="par">
+                        You could even try your hand at freelance journalism, writing pitches to magazines, newspapers and other publications.
+                    </p>
+                    <p class="par">
+                        Just be aware that some publishers (even big names) will try to take advantage of your student status and expect you to work for free. Ask about their rates before agreeing to write for them.
+                    </p>
 
-                <h5 class="sechead">2.Graphic design</h5>
+                    <h5 class="sechead">2.Graphic design</h5>
 
-                <p class="par">
-                    Design is a bit more of a challenging sector to join when you're starting out as a freelancer. Not only do you need to own some industry-standard software, but you need top skills and creativity to use it to its full potential and meet the demands of
-                    your clients
-                </p>
-                <p class="par">
-                    You could be creating a logo for a new start-up company, animating videos, illustrating snazzy PowerPoint presentations, or even working on adverts that will appear in papers and magazines
-                </p>
+                    <p class="par">
+                        Design is a bit more of a challenging sector to join when you're starting out as a freelancer. Not only do you need to own some industry-standard software, but you need top skills and creativity to use it to its full potential and meet the demands of
+                        your clients
+                    </p>
+                    <p class="par">
+                        You could be creating a logo for a new start-up company, animating videos, illustrating snazzy PowerPoint presentations, or even working on adverts that will appear in papers and magazines
+                    </p>
 
-                <h5 class="sechead">3.Programming and IT</h5>
+                    <h5 class="sechead">3.Programming and IT</h5>
 
-                <p class="par">
-                    Typical projects include helping websites with their search engine optimisation (SEO), which involves making them more visible in search engine results. Opportunities for analysing statistics and managing databases are common on freelance sites, too.
-                </p>
-                <img class="centimg" src="res/free lancer employee-vs-freelance-jobs.pngwebp.webp" alt=" alternate img" defer />
-                <h5 class="sechead">Best freelance jobs for beginners</h5>
-                <ul id="pointstyle">
-                    <li>1. Content writer</li>
-                    <li>2. Copywriter</li>
-                    <li>3. Virtual Assistant (VA)</li>
-                    <li>4. Transcriptionist</li>
-                    <li>5. English teacher</li>
-                    <li>6. Bookkeeper</li>
-                </ul>
-                <h5 class="sechead">Pros of freelancing</h5>
-                <p class="par">Here are the pros of working as a freelancer:</p>
-               
-                <ul>
-                    <li>
-                        1. Flexible working hours – You pick your hours, work from home and work around your studies.
-                    </li>
-                    <li>
-                        2. Good work-life balance – With no rules, you can take regular breaks and head out to see friends.
-                    </li>
-                    <li>
-                        3. Control over your workload – You can be selective about which tasks to take on, so if a job will take too long, or doesn't pay well enough, there's no harm in rejecting it.
-                    </li>
-                    <li>
-                        4. International clients – As the majority of freelance work's done online, freelancers can work with people from around the world.
-                    </li>
-                    <li>
-                        5. Potential to make a lot of money – With the right reputation, the amount of money you can earn is limitless.
-                    </li>
-                </ul>
-                <h5 class="sechead">Cons of freelancing</h5>
-                <p class="par">Here are the cons of working as a freelancer:</p>
-                <ul>
-                    <li>
-                        1. Keeping up with tax – Filling out self-assessment tax returns can be confusing, but our guide can help.
-                    </li>
-                    <li>
-                        2. Unstable income – You might have to deal with late payments and it's not always easy to find commissions.
-                    </li>
-                    <li>
-                        3. Distractions at home – It can take a lot of discipline to not procrastinate or spend too long in bed when you choose your own hours
-                    </li>
-                    <li>
-                        4. Work is competitive – Plenty of people will be applying for the best projects, so you'll have to work hard to gain experience and make your application stand out.
-                    </li>
-                    <li>
-                        5. Working on your own – As most of your work will be done on your tod at home, it can get lonely. Look for freelancing groups on sites like Facebook or Meet Up to find other people to chill with while you work.
-                    </li>
-                    <br />
-                </ul>
-                <p class="par">
-                    To avoid getting cabin fever, and to stay focused, we recommend heading out to a coffee shop and making the most of any free Wi-Fi you can find. Public libraries are also great places to work too.
-                </p>
-                <p class="par">
-                    Breaking up your tasks into bite-sized chunks and changing your workspace a couple of times a day will help you stay fresh and creative
-                </p>
-            </div>
+                    <p class="par">
+                        Typical projects include helping websites with their search engine optimisation (SEO), which involves making them more visible in search engine results. Opportunities for analysing statistics and managing databases are common on freelance sites, too.
+                    </p>
+                    <img class="centimg" src="res/free lancer employee-vs-freelance-jobs.pngwebp.webp" alt=" alternate img" defer />
+                    <h5 class="sechead">Best freelance jobs for beginners</h5>
+                    <ul id="pointstyle">
+                        <li>1. Content writer</li>
+                        <li>2. Copywriter</li>
+                        <li>3. Virtual Assistant (VA)</li>
+                        <li>4. Transcriptionist</li>
+                        <li>5. English teacher</li>
+                        <li>6. Bookkeeper</li>
+                    </ul>
+                    <h5 class="sechead">Pros of freelancing</h5>
+                    <p class="par">Here are the pros of working as a freelancer:</p>
+
+                    <ul>
+                        <li>
+                            1. Flexible working hours – You pick your hours, work from home and work around your studies.
+                        </li>
+                        <li>
+                            2. Good work-life balance – With no rules, you can take regular breaks and head out to see friends.
+                        </li>
+                        <li>
+                            3. Control over your workload – You can be selective about which tasks to take on, so if a job will take too long, or doesn't pay well enough, there's no harm in rejecting it.
+                        </li>
+                        <li>
+                            4. International clients – As the majority of freelance work's done online, freelancers can work with people from around the world.
+                        </li>
+                        <li>
+                            5. Potential to make a lot of money – With the right reputation, the amount of money you can earn is limitless.
+                        </li>
+                    </ul>
+                    <h5 class="sechead">Cons of freelancing</h5>
+                    <p class="par">Here are the cons of working as a freelancer:</p>
+                    <ul>
+                        <li>
+                            1. Keeping up with tax – Filling out self-assessment tax returns can be confusing, but our guide can help.
+                        </li>
+                        <li>
+                            2. Unstable income – You might have to deal with late payments and it's not always easy to find commissions.
+                        </li>
+                        <li>
+                            3. Distractions at home – It can take a lot of discipline to not procrastinate or spend too long in bed when you choose your own hours
+                        </li>
+                        <li>
+                            4. Work is competitive – Plenty of people will be applying for the best projects, so you'll have to work hard to gain experience and make your application stand out.
+                        </li>
+                        <li>
+                            5. Working on your own – As most of your work will be done on your tod at home, it can get lonely. Look for freelancing groups on sites like Facebook or Meet Up to find other people to chill with while you work.
+                        </li>
+                        <br />
+                    </ul>
+                    <p class="par">
+                        To avoid getting cabin fever, and to stay focused, we recommend heading out to a coffee shop and making the most of any free Wi-Fi you can find. Public libraries are also great places to work too.
+                    </p>
+                    <p class="par">
+                        Breaking up your tasks into bite-sized chunks and changing your workspace a couple of times a day will help you stay fresh and creative
+                    </p>
+                </div>
             </div>
 
             <!-- stock Container-->
             <div class="appbody " id="stock">
                 <div class="rrrr">
-                <h3 class="mainhead">Stock Marketing</h3><br><br>
-                <!-- Paragraph will be the Par class -->
+                    <h3 class="mainhead">Stock Marketing</h3><br><br>
+                    <!-- Paragraph will be the Par class -->
 
-                <h5 class="sechead">What is Stock Marketing?</h5><br>
-                <img class="centimg" src="res/stock.webp" alt=" Groww Portifolio" defer><br><br>
-                <p class="par">
-                    It is a public market where common people can buy and sell shares of public listed companies. Over time the value of your stock may increases or decrease with the growth and fall of the company. So, we have to choose the stock to be bought wisely. For
-                    Example, if you buy a stock of ‘X’ company for 200 rupees, then the company had a profit hike which will increase the stock say to 250 rupees. So, your profit till date will be 50 rupees. In India there are two Stock market indexes
-                    Sensex and Nifty50.
+                    <h5 class="sechead">What is Stock Marketing?</h5><br>
+                    <img class="centimg" src="res/stock.webp" alt=" Groww Portifolio" defer><br><br>
+                    <p class="par">
+                        It is a public market where common people can buy and sell shares of public listed companies. Over time the value of your stock may increases or decrease with the growth and fall of the company. So, we have to choose the stock to be bought wisely. For
+                        Example, if you buy a stock of ‘X’ company for 200 rupees, then the company had a profit hike which will increase the stock say to 250 rupees. So, your profit till date will be 50 rupees. In India there are two Stock market indexes
+                        Sensex and Nifty50.
 
-                </p>
-                <br><br>
+                    </p>
+                    <br><br>
 
 
-                <h5 class="sechead">How to Earn?</h5><br>
-                <p class="par">
-                    Everybody invests in stock to increase their worth. If one wants a good profit, they have to understand the working of a stock market properly. Else it might lead to loss in your money.<br><br>
+                    <h5 class="sechead">How to Earn?</h5><br>
+                    <p class="par">
+                        Everybody invests in stock to increase their worth. If one wants a good profit, they have to understand the working of a stock market properly. Else it might lead to loss in your money.<br><br>
 
-                </p>
-                <h3 class="mainhead"></h3>
-                <!-- Paragraph will be the Par class -->
+                    </p>
+                    <h3 class="mainhead"></h3>
+                    <!-- Paragraph will be the Par class -->
 
-                <h5 class="sechead">Ways to learn stock marketing</h5><br>
-                <p class="par">
-                    We can only master in stock marketing by investing in stock, but spending real money for this will not be a good idea. There are many apps in play store where virtual money is used for investing in various stocks. ‘Stock Market: Virtual Trading’ is one
-                    of the best app for the above purpose. It provides all the features most real trading apps will provide and the updation of LTP is very accurate. The App is completely free unless you wish to be a premium user. Also there are many
-                    youtube channels discussing the market status in various languages.<br>
-                    <!-- this is an inline link, bibance, grow and all other links should be inside this -->
-                    <br><a href=https://play.google.com/store/apps/details?id=com.stocktrainer>Stock Market: Virtual Trading </a>
-                    <br><a href=https://youtube.com/c/StockMarketINDIA>Youtube Channel </a>
-                    <br><a href=https://youtube.com/c/ShariqueSamsudheen>Malayalam Youtube Channel </a><br>
+                    <h5 class="sechead">Ways to learn stock marketing</h5><br>
+                    <p class="par">
+                        We can only master in stock marketing by investing in stock, but spending real money for this will not be a good idea. There are many apps in play store where virtual money is used for investing in various stocks. ‘Stock Market: Virtual Trading’ is one
+                        of the best app for the above purpose. It provides all the features most real trading apps will provide and the updation of LTP is very accurate. The App is completely free unless you wish to be a premium user. Also there are many
+                        youtube channels discussing the market status in various languages.<br>
+                        <!-- this is an inline link, bibance, grow and all other links should be inside this -->
+                        <br><a href=https://play.google.com/store/apps/details?id=com.stocktrainer>Stock Market: Virtual Trading </a>
+                        <br><a href=https://youtube.com/c/StockMarketINDIA>Youtube Channel </a>
+                        <br><a href=https://youtube.com/c/ShariqueSamsudheen>Malayalam Youtube Channel </a><br>
 
-                    <p>
-                        This is the profile page with total virtual money left with you
-                    </p><br><br><br>
-                    <img class="portimg" src="res/Stocktrainer2.webp" alt=" Stocktrainer Portifolio" defer>
-                    <p>
-                        This is Portifolio
-                    </p><br><br><br>
+                        <p>
+                            This is the profile page with total virtual money left with you
+                        </p><br><br><br>
+                        <img class="portimg" src="res/Stocktrainer2.webp" alt=" Stocktrainer Portifolio" defer>
+                        <p>
+                            This is Portifolio
+                        </p><br><br><br>
 
-                </p>
-                </p>
-                <h5 class="sechead">Where to invest?</h5><br>
-                <p class="par">
-                    After you are ready for real investment you can choose the platform for your Stock marketing. You must have heard about stock market brokers, but with the introduction of stock trading apps there is no more the need for them. And we can buy and sell and
-                    manage your stock even from the safety of your home. Two leading platforms for the same are Upstox and Groww. Upstox charges an amount of 249 for starting an account while Groww is completely free. Upstox have huge number of users
-                    as it started way before Groww started but since Groww is completely free we would recommend that. <br> </p>
-                <a href=https://play.google.com/store/apps/details?id=com.nextbillion.groww>Groww </a><br>
-                <a href=https://play.google.com/store/apps/details?id=in.upstox.pro>Upstox</a>
-                <br><br>
-                <p>Groww</p><br><br>
+                    </p>
+                    </p>
+                    <h5 class="sechead">Where to invest?</h5><br>
+                    <p class="par">
+                        After you are ready for real investment you can choose the platform for your Stock marketing. You must have heard about stock market brokers, but with the introduction of stock trading apps there is no more the need for them. And we can buy and sell and
+                        manage your stock even from the safety of your home. Two leading platforms for the same are Upstox and Groww. Upstox charges an amount of 249 for starting an account while Groww is completely free. Upstox have huge number of users
+                        as it started way before Groww started but since Groww is completely free we would recommend that. <br> </p>
+                    <a href=https://play.google.com/store/apps/details?id=com.nextbillion.groww>Groww </a><br>
+                    <a href=https://play.google.com/store/apps/details?id=in.upstox.pro>Upstox</a>
+                    <br><br>
+                    <p>Groww</p><br><br>
 
-                <img class="portimg" src="res/Groww2.webp" alt=" Groww Portifolio" defer><br><br>
-                <p>This is the Portifolio of Groww</p><br><br><br>
-                <br><br>
-                <p>Upstox</p><br><br>
+                    <img class="portimg" src="res/Groww2.webp" alt=" Groww Portifolio" defer><br><br>
+                    <p>This is the Portifolio of Groww</p><br><br><br>
+                    <br><br>
+                    <p>Upstox</p><br><br>
 
-                <img class="portimg" src="res/upstox3.webp" alt=" Upstox Portifolio" defer><br><br>
-                <p>This is the Portifolio of upsstox</p><br><br><br>
-                </p>
+                    <img class="portimg" src="res/upstox3.webp" alt=" Upstox Portifolio" defer><br><br>
+                    <p>This is the Portifolio of upsstox</p><br><br><br>
+                    </p>
 
+                </div>
             </div>
-        </div>
             <!--tutor Container-->
             <div class="appbody " id="tutor">
                 <div class="rrrr">
-                <h3 class="mainhead"> Tutoring </h3>
-                <h5 class="sechead">Chegg</h5>
-                <img class="centimg" src="res/chegg1.webp" alt=" alternate img" defer>
-                <!-- Paragraph will be the Par class -->
-                <p class="par">
-                    Chegg is a platform to ask doubts and learn. Students can earn through chegg by answering questions asked by others. For this, there are multiple exams to filter out the best candidate to be the experts. Before writing the exam, you have to link your
-                    PAN card. You will only get three attempts for taking the exam after which you can never attempt this exam with that PAN card. If you pass the exam you will get a mail containing the Guidelines and date by which your account will get
-                    activated. Once your account get activated you can answer for questions asked by others on your subject. Once you successfully complete a question by following their guidelines you will get paid for same after 15 of each month. If
-                    you have decent knowledge on a topic you can earn plenty by sparing very little time.
-                    <!-- a secondary heading is H5 tag and a class sechead--><br>
-                    <a href="https://expert.chegg.com">Chegg</a><br><br>
-                </p>
-                <h5 class="sechead">Bartleby</h5><br>
-                <p class="par">
-                    Another platform similar to this is Bartleby. After qualifying the examination you can start earning.<br>
-                    <a href="https://expert.chegg.com">Bartleby</a>
-                    <img class="centimg" src="res/Bartleby.webp" alt=" alternate img" defer>
-                    <!-- this is an inline link, bibance, grow and all other links should be inside this --><a href="www.google.com">google</a>
-                </p>
+                    <h3 class="mainhead"> Tutoring </h3>
+                    <h5 class="sechead">Chegg</h5>
+                    <img class="centimg" src="res/chegg1.webp" alt=" alternate img" defer>
+                    <!-- Paragraph will be the Par class -->
+                    <p class="par">
+                        Chegg is a platform to ask doubts and learn. Students can earn through chegg by answering questions asked by others. For this, there are multiple exams to filter out the best candidate to be the experts. Before writing the exam, you have to link your
+                        PAN card. You will only get three attempts for taking the exam after which you can never attempt this exam with that PAN card. If you pass the exam you will get a mail containing the Guidelines and date by which your account will
+                        get activated. Once your account get activated you can answer for questions asked by others on your subject. Once you successfully complete a question by following their guidelines you will get paid for same after 15 of each month.
+                        If you have decent knowledge on a topic you can earn plenty by sparing very little time.
+                        <!-- a secondary heading is H5 tag and a class sechead--><br>
+                        <a href="https://expert.chegg.com">Chegg</a><br><br>
+                    </p>
+                    <h5 class="sechead">Bartleby</h5><br>
+                    <p class="par">
+                        Another platform similar to this is Bartleby. After qualifying the examination you can start earning.<br>
+                        <a href="https://expert.chegg.com">Bartleby</a>
+                        <img class="centimg" src="res/Bartleby.webp" alt=" alternate img" defer>
+                        <!-- this is an inline link, bibance, grow and all other links should be inside this --><a href="www.google.com">google</a>
+                    </p>
+                </div>
             </div>
-        </div>
 
         </div>
     </div>
