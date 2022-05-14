@@ -54,17 +54,19 @@
         </div>
         <!-- expence manager -->
         <div id="expence" class="appbody">
-            <!--Expence management app using firebase-->
-            <div id="expencegraph">
-                Here there will be a graph
+
+            <div class="graphbanner">
+                <div class="graph-image"></div>
             </div>
-            <div id="expencelist">
-                here there will be a list of your expences
+
+            <div class="homepagebody">
+                <div class="list-group-item" id="expencelistt"></div>
+                <div class="list-group-item" id="incomelistt"></div>
             </div>
+
             <div id="addexpence">
-                <form id="addexpenceform">
-                    <input type="text" name="amount" placeholder="Amount" id="expamount" />
-                    <select id="expcategory">
+                <input type="text" name="amount" class="inp" placeholder="Amount" id="expamount" />
+                <select id="expcategory">
                         <option value="Food">Food</option>
                         <option value="Transport">Transport</option>
                         <option value="Entertainment">Entertainment</option>
@@ -73,9 +75,21 @@
                         <option value="Others">Others</option>
                     </select>
 
-                    <!--here is where i left off i should add button to store expences-->
-                    <input type="submit" onclick="sree()">Add</button>
-                </form>
+                <!--here is where i left off i should add button to store expences-->
+                <button class="inp" onclick="addexpence()">Add</button>
+            </div>
+            <div id="addincome">
+                <input type="text" name="amount" placeholder="Amount" id="incmount" />
+                <select id="expcategory">
+                        <option value="Tutoring">tutoring</option>
+                        <option value="crypto">Crypto</option>
+                        <option value="stock">Stock</option>
+                        <option value="freelancing">freelancing</option>
+                        <option value="others">Others</option>
+                    </select>
+
+                <!--here is where i left off i should add button to store expences-->
+                <button onclick="addincome()">Add</button>
             </div>
         </div>
         <!-- quiz -->
