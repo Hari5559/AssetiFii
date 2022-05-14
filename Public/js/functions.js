@@ -1,56 +1,36 @@
 //////////////////////////// set the scores of user //////////////////////////////
-function setscores() {
-    // set default values if score is not present
-    var intref = firebase.database().ref('users/' + firebase.auth().currentUser.uid);
-    intref.once('value', function(snapshot) {
-        var user = snapshot.val();
-        if (user.score == undefined) {
-            intref.set({
-                score: 0,
-                level: 0,
-                goals: 0
-            });
-        }
-    });
-
-    var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
-
-
-    ref.once('value', function(snapshot) {
-        var scores = snapshot.val();
-        if (scores.score == null) {
-            ref.set({
-                score: 0,
-                level: 0,
-                goals: 0
-            });
-        }
-        document.getElementById('score').innerHTML = 'score: ' + scores.score;
-        document.getElementById('level').innerHTML = 'level: ' + scores.level;
-        document.getElementById('goals').innerHTML = 'goals: ' + scores.goals;
-    });
-}
-
-
-
-
-////////////////////////// update the score of user //////////////////////////////
-function updatescore(sc) {
+function setscores(scoree) {
 
     var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
     ref.once('value', function(snapshot) {
         var scores = snapshot.val();
-        var oldscore = scores.score % 100;
-        scores.score += sc;
-        var newscore = scores.score % 100;
-        if (newscore > oldscore) {
-            scores.level += 1;
+        if (scores == null) {
+            scores = [];
+            scores.push({
+                score: scoree,
+                level: 0,
+            });
+        } else {
+            oldscore = scores.score % 100;
+            console.log(oldscore);
+            scores.score += scoree;
+            var newscore = scores.score % 100;
+            console.log(newscore);
+            if (newscore > oldscore) {
+                scores.level += 1;
+            }
+
+
+            var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
+            ref.push({
+                socre: sscore,
+                level: llevel,
+            });
+
+
         }
-        ref.update(scores);
-
-
-    });
-
+        localStorage.setItem('scores', JSON.stringify(scores));
+    })
 }
 
 ////////////////////////////// add the expence of user //////////////////////////////
