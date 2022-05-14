@@ -1,6 +1,9 @@
 //////////////////////////// set the scores of user //////////////////////////////
 function setscores() {
     var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
+    if (ref.once('value') == null) {
+        ref.set(0);
+    }
 
     ref.once('value', function(snapshot) {
         var scores = snapshot.val();

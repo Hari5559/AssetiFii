@@ -14,17 +14,12 @@ function submitquiz(quizid) {
     if (firebase.auth().currentUser.email == "sreejithksgupta2255@gmail.com") {
         setanswers(quizid);
     } else {
-
-
-        var answers = [];
-        var answersRef = firebase.database().ref('quizzes/' + quizid + '/answers');
+        // get answer list from firebase
+        var answersRef = firebase.database().ref('quizzes/' + quizid + '/answers/');
         answersRef.once('value', function(snapshot) {
-            snapshot.forEach(function(childSnapshot) {
-                var childKey = childSnapshot.key;
-                var childData = childSnapshot.val();
-                console.log(childKey + ": " + childData);
-                answers.push(childData);
-            });
+            var answers = snapshot.val();
+
+
         });
 
         var questions = classes("quizquestion");
@@ -32,6 +27,8 @@ function submitquiz(quizid) {
         for (var i = 0; i < questions.length; i++) {
 
             var question = document.getElementById('question' + (i + 1));
+
+            console.log("Question value:" + question.value + " ansers[i]:");
             if (question.value == answers[i]) {
                 score++;
             }
