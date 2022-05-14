@@ -44,7 +44,7 @@ function setscores(scoree) {
 
 
 ///////////////////// fetch Stock Data /////////////////////////////////
-/*
+
 const options = {
     method: 'GET',
     headers: {
@@ -67,4 +67,3 @@ function showstockdata(data) {
     }
     id('stocklist').innerHTML = stockdata;
 }
-*/
