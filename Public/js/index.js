@@ -4,7 +4,7 @@ var j = 0;
 carouselcall();
 checkAuthState();
 setincomeandexpence();
-// -----------------------  getTrend();---------------------------------
+//getTrend();
 
 ///////////////// Helper Functions /////////////////////////////////////////////
 
