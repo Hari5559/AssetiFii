@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Week [Number]</title>
+    <title>Stock/Crypto Quiz Week [Number]</title>
 
     <link rel="stylesheet" href="../css/quiz.css">
 
-    <script src="../js/firebase.js"></script>
-    <script src="../js/quiz.js"></script>
-    <script src="../js/functions.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js" defer></script>
+
+    <script src="../js/firebase.js" defer></script>
+    <script src="../js/quiz.js" defer></script>
 </head>
 
 <body>
@@ -72,6 +74,15 @@
                 </div>
 
                 <!--Complete the remaining Like this-->
+
+            </div>
+        </div>
+        <div id="submitdiv">
+            <button id="submitbutton" onclick="submitquiz('s1')">Submit</button>
+            <!--change s1 to s/c [Stock/Crypto - week number]-->
+            <div id="scorecard"></div>
+        </div>
+
 
 </body>
 
