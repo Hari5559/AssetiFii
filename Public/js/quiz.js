@@ -25,7 +25,7 @@ function submitquiz(quizid) {
     var score = 0;
     for (var i = 0; i < questions.length; i++) {
 
-        var question = id('question2');
+        var question = id('question' + (i + 1));
         console.log('question' + (i + 1));
         console.log(question.value);
         if (question.value == answers[i]) {
@@ -34,4 +34,5 @@ function submitquiz(quizid) {
         }
     }
     id("scorecard").innerHTML = "You scored " + score + " out of " + questions.length;
+    console.log(score);
 }
