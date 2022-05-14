@@ -32,7 +32,7 @@ function submitquiz(quizid) {
                 }
                 id("scorecard").innerHTML = "You scored " + score + " out of " + questions.length;
                 console.log(score + 'added to your score');
-                setscores(score);
+                updatescore(score);
 
             });
 
