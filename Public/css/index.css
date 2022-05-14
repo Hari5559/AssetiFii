@@ -235,18 +235,22 @@ ul {
 }
 
 .loginoutbutton {
-    background-color: blue;
+    background-color: rgb(230, 230, 233);
     border: none;
-    color: rgb(236, 217, 198);
+    color: rgb(10, 10, 10);
+    width:60%;
+    height: 10%;
     font-size: larger;
     text-decoration: none;
     width: 20vw;
     height: 5vh;
-    border-radius: 30px;
+    border-radius: 3px;
 }
 
 .loginoutbutton:hover {
-    background-color: rgb(25, 15, 87);
+    background-color: rgb(132, 131, 138);
+    border-radius: 5px;
+    
 }
 
 .card {
