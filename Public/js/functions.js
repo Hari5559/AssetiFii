@@ -1,14 +1,20 @@
 //////////////////////////// set the scores of user //////////////////////////////
 function setscores() {
+    // set default values if score is not present
+    var intref = firebase.database().ref('users/' + firebase.auth().currentUser.uid);
+    intref.once('value', function(snapshot) {
+        var user = snapshot.val();
+        if (user.score == undefined) {
+            intref.update({
+                score: 0,
+                level: 0,
+                goals: 0
+            });
+        }
+    });
+
     var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
-    if (ref.once('value') == null) {
-        console.log("null found.. Setting values");
-        ref.set({
-            score: 0,
-            level: 0,
-            goals: 0
-        });
-    }
+
 
     ref.once('value', function(snapshot) {
         var scores = snapshot.val();
