@@ -55,7 +55,7 @@ body {
 /* navigation Bar */
 
 #navigationcont {
-    width: 90vw;
+    width: clamp(300px, 60%, 1500px);
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -65,10 +65,11 @@ body {
     border-radius: var(--bordrad);
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
 }
 
 .navimg {
-    width: 8vh;
+    width: clamp(5vw, 50px, 150px);
     background-color: #1455e0;
 }
 
@@ -325,7 +326,7 @@ a:hover {
     }
     .homepagebody {
         flex-direction: row;
-        width: 40vw;
+        width: 100%;
     }
 }
 

@@ -18,22 +18,20 @@ function submitquiz(quizid) {
         var answersRef = firebase.database().ref('quizzes/' + quizid + '/answers/');
         answersRef.once('value', function(snapshot) {
             var answers = snapshot.val();
+            var questions = classes("quizquestion");
+            var score = 0;
+            for (var i = 0; i < questions.length; i++) {
 
+                var question = document.getElementById('question' + (i + 1));
+                if (question.value == answers[i]) {
+                    score++;
+                }
+            }
+            id("scorecard").innerHTML = "You scored " + score + " out of " + questions.length;
 
         });
 
-        var questions = classes("quizquestion");
-        var score = 0;
-        for (var i = 0; i < questions.length; i++) {
 
-            var question = document.getElementById('question' + (i + 1));
-
-            console.log("Question value:" + question.value + " ansers[i]:");
-            if (question.value == answers[i]) {
-                score++;
-            }
-        }
-        id("scorecard").innerHTML = "You scored " + score + " out of " + questions.length;
     }
 }
 

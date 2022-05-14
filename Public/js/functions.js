@@ -2,7 +2,12 @@
 function setscores() {
     var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
     if (ref.once('value') == null) {
-        ref.set(0);
+        console.log("null found.. Setting values");
+        ref.set({
+            score: 0,
+            level: 0,
+            goals: 0
+        });
     }
 
     ref.once('value', function(snapshot) {
