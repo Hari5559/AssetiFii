@@ -57,8 +57,16 @@ async function getTrend() {
     var trend = '';
     for (i = 0; i < 7; i++) {
         coinname = coinlist[i].item.name;
-        coinprice = (coinlist[i].item.price_btc)
-        trend += '<li class="list-group-item"><div class="stcknme">' + coinname + ' </div> <div class="stckscre"> Price:' + coinprice + '</div></li>';
+
+        coinprice = Math.round(coinlist[i].item.price_btc * 30000 * 70) / 100;
+        if (coinprice == 0) {
+
+            coinprice = '> ₹0.01';
+        } else {
+            coinprice = ':     ₹ ' + coinprice;
+        }
+
+        trend += '<li class="list-group-item"><div class="stcknme">' + coinname + ' </div> <div class="stckscre"> Price ' + coinprice + '</div></li>';
 
     }
     document.getElementById('cryptolist').innerHTML = trend;
