@@ -125,7 +125,7 @@ body {
     height: 40vh;
     width: 100%;
     margin-top: 1vw;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(247, 240, 240);
     color: #fff;
 }
 
@@ -275,7 +275,7 @@ ul{
     width: 96vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .rowBtn {
@@ -294,6 +294,7 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin:2%;
     height: 10vh;
     background-color: rgb(139, 12, 12);
     border-radius: 10px;
@@ -309,6 +310,14 @@ ul{
     background-color: rgb(116, 190, 190);
     width: 100%;
     height: 20%;
+}
+.quizlinks li{
+    color: #1455e0;
+    background-color: #333333;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 1vh;
+    border-radius: 10px;
 }
 
 #quizlinks a.show {
