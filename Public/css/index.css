@@ -317,6 +317,10 @@ ul {
     padding: 1vh;
     border-radius: 10px;
 }
+.quizlinks li:hover{
+    background-color: #19191a;
+    color: #38cf6a;
+}
 
 #quizlinks a.show {
     left: 0;
