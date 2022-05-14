@@ -22,14 +22,16 @@ function submitquiz(quizid) {
     });
 
     var questions = classes("quizquestion");
-    console.log(questions);
     var score = 0;
     for (var i = 0; i < questions.length; i++) {
-        // check answer from input tag
-        var userAnswer =
-            if (userAnswer == answers[i]) {
-                score++;
-            }
+
+        var question = id('question2');
+        console.log('question' + (i + 1));
+        console.log(question.value);
+        if (question.value == answers[i]) {
+            score++;
+            console.log("correct");
+        }
     }
     id("scorecard").innerHTML = "You scored " + score + " out of " + questions.length;
 }
