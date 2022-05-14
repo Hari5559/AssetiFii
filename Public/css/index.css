@@ -153,12 +153,14 @@ body {
     font-weight: 600;
     font-style: oblique;
     font-size: 220%;
-    margin-bottom: 3vh;
+    margin-top: 3vh;
+    margin-bottom:1vh;
+
 }
 
 .sechead {
     text-align: left;
-    font-weight: 500;
+    font-weight: 750;
     font-style: italic;
     font-size: 170%;
 }
@@ -266,6 +268,7 @@ ul {
     font-size: 250%;
     color: aliceblue;
     background-color: rgb(18, 7, 99);
+    padding-top:1%;
 }
 
 .rowcontainer {
@@ -285,7 +288,7 @@ ul {
 }
 
 .rowitem:hover {
-    background-color: rgb(116, 190, 190);
+    background-color: rgb(107, 16, 16);
 }
 
 .rowitem {
@@ -305,7 +308,7 @@ ul {
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    background-color: rgb(116, 190, 190);
+    background-color: rgb(190, 137, 116);
     width: 100%;
     height: 20%;
 }
