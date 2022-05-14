@@ -1,3 +1,5 @@
+/*  common settings and prerequsites */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -15,16 +17,22 @@
     --bordrad: 5px;
 }
 
+
+/* Html Elements */
+
 body {
     font-family: var(--f_fam);
     font-size: var(--f_size);
     animation-duration: var(--animfast);
-    background-color: aquamarine;
+    background-color: rgb(59, 11, 150);
     overscroll-behavior: none;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
+
+
+/* main elements and containers  */
 
 #appcontainer {
     width: 100vw;
@@ -39,7 +47,12 @@ body {
 .appbody {
     display: none;
     height: 90vh;
+    width: 96vw;
+    margin-left: 2vw;
 }
+
+
+/* navigation Bar */
 
 #navigationcont {
     width: 90vw;
@@ -54,7 +67,188 @@ body {
     margin-right: auto;
 }
 
-#resources {
+.navimg {
+    width: 8vh;
+    background-color: #1455e0;
+}
+
+.navbtn {
+    border-radius: 50%;
+    background-color: #1455e0;
+}
+
+
+/* Home */
+
+#home {
+    display: block;
+}
+
+.carousal-image {
+    background-color: rgb(116, 190, 190);
+    height: 30vh;
+}
+
+.banner {
+    height: 30vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+.homepagebody {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.currentlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 40vh;
+    width: 90vw;
+    margin-top: 1vw;
+    background-color: rgb(230, 230, 230);
+    color: #fff;
+}
+
+.list-group-item {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    color: black;
+    background-color: rgb(65, 65, 65);
+    border-radius: 30px;
+}
+
+
+/* expense manager */
+
+
+/* resources */
+
+.mainhead {
+    text-align: center;
+    font-weight: 600;
+    font-style: oblique;
+    font-size: 200%;
+}
+
+.sechead {
+    text-align: left;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 150%;
+}
+
+.par {
+    text-align: justify;
+    font-size: 110%;
+    font-weight: 520;
+}
+
+.centimg {
+    margin: 2%;
+    width: 96%;
+    border: none;
+    border-radius: var(--bordrad);
+}
+
+.portimg {
+    margin: 2%;
+    margin-left: 25%;
+    width: 50%;
+    border: none;
+    border-radius: var(--bordrad);
+}
+
+
+/* quiz */
+
+.quizlinks {
+    display: none;
+}
+
+.quizlinks a {
+    text-decoration: none;
+    text-align: center;
+    font-size: larger;
+    border: none;
+    color: rgb(236, 217, 198);
+    line-height: 2.5rem;
+}
+
+
+/* profile  */
+
+#userdata {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#user_image {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.loginoutbutton {
+    background-color: blue;
+    border: none;
+    color: rgb(236, 217, 198);
+    font-size: larger;
+    text-decoration: none;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 30px;
+}
+
+.loginoutbutton:hover {
+    background-color: rgb(25, 15, 87);
+}
+
+.card {
+    background-color: #333333;
+    color: azure;
+    border-radius: var(--bordrad);
+    width: clamp(300px, 50%, 800px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+}
+
+.userd {
+    height: 10%;
+    width: 100%;
+    font-size: larger;
+}
+
+
+/* common items */
+
+.Hheading {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 250%;
+    color: aliceblue;
+    background-color: rgb(18, 7, 99);
+}
+
+.rowcontainer {
     height: 70vh;
     width: 96vw;
     display: flex;
@@ -85,65 +279,54 @@ body {
     text-align: center;
 }
 
-.caa {
-    background-color: rgb(116, 190, 190);
-    height: 30vh;
-}
-
-.navimg {
-    width: 10vw;
-    background-color: #1455e0;
-}
-
-.navbtn {
-    border-radius: 50%;
-    background-color: #1455e0;
-}
-
-.Imagebanner {
-    height: 30vh;
-    background-color: black;
-    overflow: hidden;
-}
-
-.homepagebody {
-    height: 50vh;
-    width: 100vw;
+.rowitem :hover .sub-menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    position: absolute;
+    background-color: rgb(116, 190, 190);
+    width: 100%;
+    height: 20%;
 }
 
-.currentlist {
-    border: solid black;
-    height: 40vh;
-    width: 45vw;
-    background-color: black;
-    color: #fff;
+#quizlinks a.show {
+    left: 0;
+    z-index: 1;
 }
 
-.Hheading {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 250%;
-    color: aliceblue;
-    background-color: rgb(18, 7, 99);
+a {
+    color: var(--Prim_col);
 }
 
-.loginoutbutton {
-    background-color: blue;
-    border: none;
-    color: rgb(236, 217, 198);
-    font-size: larger;
-    text-decoration: none;
-    width: 20vw;
-    height: 5vh;
-    border-radius: 30px;
+a:hover {
+    color: var(--primdark_col);
 }
 
-.loginoutbutton:hover {
-    background-color: rgb(25, 15, 87);
+
+/*  */
+
+
+/* media query to set styling for big screens */
+
+@media screen and (min-width: 1000px) {
+    .mainhead {
+        font-size: 300%;
+    }
+    .sechead {
+        font-size: 200%;
+    }
+    .par {
+        font-size: 120%;
+    }
+    .centimg {
+        margin: 2%;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .homepagebody {
+        flex-direction: row;
+        width: 40vw;
+    }
 }
 
 ::-webkit-scrollbar {
