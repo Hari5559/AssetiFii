@@ -23,7 +23,6 @@ const auth = firebase.auth();
 function checkAuthState() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            setscores();
             setuserdata(user.displayName, user.photoURL);
             document.getElementById('userdata').style.display = "block";
             document.getElementById('divlogn').style.display = "none";

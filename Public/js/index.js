@@ -4,6 +4,7 @@ var j = 0;
 carouselcall();
 checkAuthState();
 setincomeandexpence();
+setscores();
 //getTrend();
 
 ///////////////// Helper Functions /////////////////////////////////////////////
@@ -132,7 +133,6 @@ function addexpence() {
     });
 
     // update the score
-    updatescore(10);
     // clear the input
 
 }
@@ -150,5 +150,17 @@ function setincomeandexpence() {
         for (i = 0; i < exp.length; i++) {
             id('expencelistt').innerHTML += '<li class="list-group-item" > <div class = "stcknme" > ' + exp[i].category + ' </div> <div class="stckscre">₹ ' + exp[i].amount + '</div > </li>';
         }
+    }
+}
+
+////////////////// set scores from local storage////////////////////////////////
+function setscores() {
+    var scores = JSON.parse(localStorage.getItem('scores'));
+    if (scores.score != null) {
+        id('score').innerHTML = scores.score;
+        id('level').innerHTML = scores.level;
+    } else {
+        id('score').innerHTML = 'Score= ' + 0;
+        id('level').innerHTML = 'Level= ' + 1;
     }
 }
