@@ -1,20 +1,140 @@
+function setscores() {
+    var scores = JSON.parse(localStorage.getItem('scores'));
+    if (scores == null) {
+        scores = [];
+        // set score and level 0 in scores
+        scores.push({
+            score: 0,
+            level: 0
+        });
+
+        // make a new json string
+        localStorage.setItem('scores', JSON.stringify(scores));
+    }
+
+    id("score").innerHTML = 'Score= ' + scores[0].score;
+    id("level").innerHTML = 'Level= ' + scores[0].level;
+
+}
+
+function updatescore(score) {
+
+    var scores = JSON.parse(localStorage.getItem('scores'));
+    oldscore = scores[0].score;
+
+    scores[0].score += score;
+
+
+    lvlup = parseInt(((scores[0].score) - (oldscore)) / 10);
+    if (lvlup > 0) {
+        scores[0].level += lvlup;
+    }
+    // set score and level in scores
+    localStorage.setItem('scores', JSON.stringify(scores));
+    setscores();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //////////////////////////// set the scores of user //////////////////////////////
+
+/*
 function setscores(scoree) {
+
 
     var ref = firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/scores/');
     ref.once('value', function(snapshot) {
-        var scores = snapshot.val();
-        if (scores == null) {
-            scores = [];
-            scores.push({
-                score: 0,
-                level: 0,
-            });
-        } else {
-            oldscore = scores.score % 100;
+            var scores = snapshot.val();
+
+
+
+            if (scores == null) {
+                scores = [];
+                scores.push({
+                    score: 0,
+                    level: 0,
+                });
+            }
+            if (scoree == 0) {
+                console.log("no score added -just checking if score exists");
+                return;
+            }
+
+            oldscore = scores[0].score % 100;
             console.log(oldscore);
-            scores.score += scoree;
-            var newscore = scores.score % 100;
+            scores[0].score += scoree;
+            var newscore = scores[0].score % 100;
             console.log(newscore);
             if (newscore > oldscore) {
                 scores.level += 1;
@@ -30,9 +150,7 @@ function setscores(scoree) {
 
         }
         localStorage.setItem('scores', JSON.stringify(scores));
-        id('score').innerHTML = scores.score;
-        id('level').innerHTML = scores.level;
-    })
+    });
 }
 
 ////////////////////////////// add the expence of user //////////////////////////////
@@ -44,7 +162,7 @@ function setscores(scoree) {
 
 
 ///////////////////// fetch Stock Data /////////////////////////////////
-/*
+
 const options = {
     method: 'GET',
     headers: {

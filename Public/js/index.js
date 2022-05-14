@@ -5,7 +5,7 @@ carouselcall();
 checkAuthState();
 setincomeandexpence();
 setscores();
-//getTrend();
+getTrend();
 
 ///////////////// Helper Functions /////////////////////////////////////////////
 
@@ -102,9 +102,9 @@ function addincome() {
         amount: amt,
         category: cat
     });
-
+    sr = amt / 100;
     // update the score
-    updatescore(10);
+    updatescore(sr);
     // clear the input
 
 }
@@ -131,10 +131,9 @@ function addexpence() {
         amount: amt,
         category: cat
     });
+    sr = -1 * (amt / 100);
 
-    // update the score
-    // clear the input
-
+    updatescore(sr);
 }
 
 ////////////////// set income and expence from local storage////////////////////////////////
@@ -154,13 +153,3 @@ function setincomeandexpence() {
 }
 
 ////////////////// set scores from local storage////////////////////////////////
-function setscores() {
-    var scores = JSON.parse(localStorage.getItem('scores'));
-    if (scores.score != null) {
-        id('score').innerHTML = scores.score;
-        id('level').innerHTML = scores.level;
-    } else {
-        id('score').innerHTML = 'Score= ' + 0;
-        id('level').innerHTML = 'Level= ' + 1;
-    }
-}
