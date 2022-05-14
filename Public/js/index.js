@@ -1,7 +1,9 @@
 ////////////////// to be called on page load //////////////////////////
+const cryptoapi = 'https://api.coingecko.com/api/v3/search/trending';
 var j = 0;
 carouselcall();
 checkAuthState();
+getTrend();
 
 ///////////////// Helper Functions /////////////////////////////////////////////
 
@@ -46,4 +48,21 @@ function showhide(code) {
         return
     }
     item.style.display = "none";
+}
+
+async function getTrend() {
+    const response = await fetch(cryptoapi);
+    const data = await response.json();
+    coinlist = data.coins;
+    var trend = '';
+    for (i = 0; i < 7; i++) {
+        coinname = coinlist[i].item.name;
+        coinprice = (coinlist[i].item.price_btc)
+        trend += '<li class="list-group-item"><div class="stcknme">' + coinname + ' </div> <div class="stckscre"> Price:' + coinprice + '</div></li>';
+
+    }
+    document.getElementById('cryptolist').innerHTML = trend;
+
+
+
 }
